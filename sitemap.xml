@@ -2,9 +2,6 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://bigfa.github.io/Notability/series/apple/</loc>
-    <lastmod>2022-03-01T14:47:34+08:00</lastmod>
-  </url><url>
     <loc>https://bigfa.github.io/Notability/categories/</loc>
     <lastmod>2022-03-01T14:47:34+08:00</lastmod>
   </url><url>
@@ -21,6 +18,9 @@
     <lastmod>2022-03-01T14:47:34+08:00</lastmod>
   </url><url>
     <loc>https://bigfa.github.io/Notability/tags/mini/</loc>
+    <lastmod>2022-03-01T14:47:34+08:00</lastmod>
+  </url><url>
+    <loc>https://bigfa.github.io/Notability/series/apple/</loc>
     <lastmod>2022-03-01T14:47:34+08:00</lastmod>
   </url><url>
     <loc>https://bigfa.github.io/Notability/categories/zine/</loc>
