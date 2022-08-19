@@ -2,25 +2,25 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://bigfa.github.io/Notability/categories/</loc>
-    <lastmod>2022-05-01T16:13:09+08:00</lastmod>
-  </url><url>
     <loc>https://bigfa.github.io/Notability/</loc>
-    <lastmod>2022-05-01T16:13:09+08:00</lastmod>
-  </url><url>
-    <loc>https://bigfa.github.io/Notability/series/</loc>
     <lastmod>2022-05-01T16:13:09+08:00</lastmod>
   </url><url>
     <loc>https://bigfa.github.io/Notability/story/</loc>
     <lastmod>2022-05-01T16:13:09+08:00</lastmod>
   </url><url>
-    <loc>https://bigfa.github.io/Notability/tags/</loc>
+    <loc>https://bigfa.github.io/Notability/series/</loc>
+    <lastmod>2022-05-01T16:13:09+08:00</lastmod>
+  </url><url>
+    <loc>https://bigfa.github.io/Notability/categories/</loc>
     <lastmod>2022-05-01T16:13:09+08:00</lastmod>
   </url><url>
     <loc>https://bigfa.github.io/Notability/story/2022-04/</loc>
     <lastmod>2022-05-01T16:13:09+08:00</lastmod>
   </url><url>
     <loc>https://bigfa.github.io/Notability/tags/mini/</loc>
+    <lastmod>2022-05-01T16:13:09+08:00</lastmod>
+  </url><url>
+    <loc>https://bigfa.github.io/Notability/tags/</loc>
     <lastmod>2022-05-01T16:13:09+08:00</lastmod>
   </url><url>
     <loc>https://bigfa.github.io/Notability/series/apple/</loc>
