@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Notability</title>
+    <title>Rich</title>
     <link>https://bigfa.github.io/Notability/</link>
-    <description>Recent content on Notability</description>
+    <description>Recent content on Rich</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
     <lastBuildDate>Sun, 01 May 2022 16:13:09 +0800</lastBuildDate><atom:link href="https://bigfa.github.io/Notability/index.xml" rel="self" type="application/rss+xml" />
