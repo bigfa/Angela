@@ -5,6 +5,9 @@
     <loc>https://bigfa.github.io/Notability/</loc>
     <lastmod>2022-05-01T16:13:09+08:00</lastmod>
   </url><url>
+    <loc>https://bigfa.github.io/Notability/categories/setup/</loc>
+    <lastmod>2022-05-01T16:13:09+08:00</lastmod>
+  </url><url>
     <loc>https://bigfa.github.io/Notability/story/</loc>
     <lastmod>2022-05-01T16:13:09+08:00</lastmod>
   </url><url>
@@ -26,10 +29,10 @@
     <loc>https://bigfa.github.io/Notability/series/apple/</loc>
     <lastmod>2022-05-01T16:13:09+08:00</lastmod>
   </url><url>
-    <loc>https://bigfa.github.io/Notability/categories/zine/</loc>
-    <lastmod>2022-05-01T16:13:09+08:00</lastmod>
-  </url><url>
     <loc>https://bigfa.github.io/Notability/story/2022-03/</loc>
+    <lastmod>2022-04-01T16:13:09+08:00</lastmod>
+  </url><url>
+    <loc>https://bigfa.github.io/Notability/categories/zine/</loc>
     <lastmod>2022-04-01T16:13:09+08:00</lastmod>
   </url><url>
     <loc>https://bigfa.github.io/Notability/story/2022-02/</loc>
@@ -41,5 +44,9 @@
     <loc>https://bigfa.github.io/Notability/movies/</loc>
   </url><url>
     <loc>https://bigfa.github.io/Notability/about/</loc>
+  </url><url>
+    <loc>https://bigfa.github.io/Notability/categories/nomad/</loc>
+  </url><url>
+    <loc>https://bigfa.github.io/Notability/categories/digital/</loc>
   </url>
 </urlset>

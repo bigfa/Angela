@@ -8,11 +8,38 @@
     <language>zh-CN</language>
     <lastBuildDate>Sun, 01 May 2022 16:13:09 +0800</lastBuildDate><atom:link href="https://bigfa.github.io/Notability/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>贱志</title>
-      <link>https://bigfa.github.io/Notability/categories/zine/</link>
+      <title>Setup</title>
+      <link>https://bigfa.github.io/Notability/categories/setup/</link>
       <pubDate>Sun, 01 May 2022 16:13:09 +0800</pubDate>
       
+      <guid>https://bigfa.github.io/Notability/categories/setup/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>笔记</title>
+      <link>https://bigfa.github.io/Notability/categories/zine/</link>
+      <pubDate>Fri, 01 Apr 2022 16:13:09 +0800</pubDate>
+      
       <guid>https://bigfa.github.io/Notability/categories/zine/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>数字游民</title>
+      <link>https://bigfa.github.io/Notability/categories/nomad/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bigfa.github.io/Notability/categories/nomad/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>数码产品</title>
+      <link>https://bigfa.github.io/Notability/categories/digital/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bigfa.github.io/Notability/categories/digital/</guid>
       <description></description>
     </item>
     
