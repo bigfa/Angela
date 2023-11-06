@@ -1,0 +1,49 @@
+<!doctype html><html lang=en prefix="og: http://ogp.me/ns#"><head><title>Hugo Theme Farallon - bigfa's Blog</title>
+<meta charset=utf-8><meta http-equiv=X-UA-Compatible content="IE=edge,chrome=1"><meta name=viewport content="width=device-width,initial-scale=1,minimal-ui,shrink-to-fit=no"><link rel=stylesheet href=https://bigfa.github.io/hugo-theme-notability/scss/app.min.4f10fdd83b2f38e9a1254ccb5d5ca9b75f2d30827d87cf49ba783bf824776027.css integrity="sha256-TxD92DsvOOmhJUzLXVypt18tMIJ9h89Jung7+CR3YCc=" media=screen><link type=image/vnd.microsoft.icon href=/hugo-theme-notability/images/favicon.png rel="shortcut icon"><meta property="og:title" content="Hugo Theme Farallon"><meta property="og:url" content="https://bigfa.github.io/hugo-theme-notability/en/story/hugo-theme-farallon/"><meta property="og:image" content><meta property="og:description" content><meta property="og:type" content="article"><meta name=twitter:card content="summary_large_image"><meta name=twitter:image:src content><meta name=twitter:title content="Hugo Theme Farallon"><meta name=twitter:description content></head><body><header class="metabar metabar--bordered"><div class="metabar--block layoutSingleColumn" itemprop=publisher itemscope itemtype=https://schema.org/Organization><h1 class=metabar--headline itemprop=logo itemscope itemtype=https://schema.org/ImageObject><a href=https://bigfa.github.io/hugo-theme-notability/en/ class=metabar--logo><img src=/hugo-theme-notability/images/logo.png class=metabar--logoImage width=38 height=47></a></h1><nav class=site--nav><a href=/hugo-theme-notability/en/categories/>Categories</a>
+<a href=/hugo-theme-notability/en/movies/>Movies</a>
+<a href=/hugo-theme-notability/en/story/>Stories</a>
+<a href=/hugo-theme-notability/en/tags/>Tags</a>
+<a href=/hugo-theme-notability/en/gears/>Gears</a>
+<a href=/hugo-theme-notability/en/about/>About</a></nav><svg class="menu--icon" width="1em" height="1em" viewBox="0 0 24 14" fill="currentcolor" aria-hidden="true"><line x1="24" y1="1" y2="1" stroke="currentcolor" stroke-width="2"/><line x1="24" y1="7" x2="4" y2="7" stroke="currentcolor" stroke-width="2"/><line x1="24" y1="13" x2="8" y2="13" stroke="currentcolor" stroke-width="2"/></svg></div></header><div class=mask></div><main class=main><div class="layoutSingleColumn u-paddingTop50 u-xs-paddingTop15"><h2 class=article--headline>Hugo Theme Farallon</h2><div class=article--meta><time datetime='2023-10-30 21:07:10' class=humane--time>2023-10-30 21:07:10</time>
+<span class=dot></span>
+<a href=/hugo-theme-notability/en/categories/zine/>Zine</a></div><div class=translatedCard><h4>Translations</h4><ul><li><a href=https://bigfa.github.io/hugo-theme-notability/story/hugo-theme-farallon/>zh-cn: Hugo 主题 Farallon</a></li></ul></div><details class=toc open><summary class=toc-title>TOC</summary><nav id=TableOfContents><ul><li><a href=#user-guide>User Guide</a><ul><li><a href=#site-wide-settings>Site-wide settings</a></li><li><a href=#i18n>i18n</a></li><li><a href=#card-list-category-archive-template>Card list category archive template</a></li></ul></li><li><a href=#setting-for-china-mainland>Setting for China mainland</a><ul><li><a href=#goods-list-template>Goods list template</a></li><li><a href=#douban-faves>Douban faves</a></li><li><a href=#douban-subject>Douban Subject</a></li></ul></li></ul></nav></details><div class="content graph"><p><figure class=grap--figure><img src=https://static.fatesinger.com/2023/06/u1ak8xgmyn9ec24r.png alt="Hugo Theme Farallon"><figcaption class=imageCaption>Hugo Theme Farallon</figcaption></figure></p><blockquote><p>This theme is created using ancient methods and does not rely on third-party frameworks.</p></blockquote><p>Current version <code>0.2.6</code>，last update <code>2023/10/30</code></p><p><a href=https://bigfa.github.io/hugo-theme-farallon/ target=_blank rel=noopener>演示地址</a></p><h2 id=user-guide>User Guide</h2><h3 id=site-wide-settings>Site-wide settings</h3><p>Fields under <code>[Params]</code></p><h4 id=description>description</h4><ul><li>Type: string</li></ul><p>Site description.</p><h4 id=mainsections>mainSections</h4><ul><li>Type:<code>[string]</code></li><li>Default:<code>['story']</code></li></ul><p>Pages places under this/those sections will be shown on homepage and archive page.</p><h3 id=i18n>i18n</h3><p>In order to use a language, set <code>DefaultContentLanguage</code> to the language code in the configuration file.</p><ul><li><code>en</code> English</li><li><code>zh-cn</code>Chinese (Simplified)</li></ul><p>For example, if you want to use English, set <code>DefaultContentLanguage</code> to en.</p><h3 id=card-list-category-archive-template>Card list category archive template</h3><p>To use a template for your desired page, such as for the <code>travel</code> category, follow these steps:</p><ol><li>Navigate to the <code>content</code> directory in your file system.</li><li>Create a new file called <code>_index.md </code>within the <code>categories/travel</code> directory. This file will represent the main page for the <code>travel</code> category.</li><li>Open the <code>_index.md</code> file and add the following content:</li></ol><pre tabindex=0><code>---
+title: Travel
+layout: travel
+---
+</code></pre><p>Save the file, and you’re done. The template named <code>travel</code> will be used to render the <code>travel</code> category page.</p><p>Make sure you have the necessary templates and configurations in place to support the <code>travel</code> layout.</p><p>Please note that <code>travel</code> is the category slug. To display a separate category name, you can customize the title in the front matter of the <code>_index.md</code> file.</p><h2 id=setting-for-china-mainland>Setting for China mainland</h2><h3 id=goods-list-template>Goods list template</h3><p>To set the <code>faves</code> field in the <code>_index.md</code> file under the <code>gears</code> directory in the <code>content</code> directory, follow the format below:</p><ol><li>Create a new file called _index.md within the <code>gears</code> directory.</li><li>Open the <code>_index.md</code> file and add the following content:</li></ol><pre tabindex=0><code>---
+title: &#34;Gears&#34;
+subtitle: &#34;my fuji gears&#34;
+date: 2021-03-06T15:39:00-06:00
+draft: false
+faves:
+    [
+        {
+            &#34;title&#34;: &#34;instax mini 40™&#34;,
+            &#34;cover&#34;: &#34;https://static.fatesinger.com/2023/05/3fmdvfzy5kwu320q.png&#34;,
+            &#34;cat&#34;: &#34;Gear&#34;,
+            &#34;brand&#34;: &#34;FujiFilm&#34;,
+        },
+        {
+            &#34;title&#34;: &#34;Sofort&#34;,
+            &#34;cover&#34;: &#34;https://static.fatesinger.com/2023/10/tlp9i57mnbamhapp.png&#34;,
+            &#34;cat&#34;: &#34;Gear&#34;,
+            &#34;brand&#34;: &#34;Leica&#34;,
+        },
+        {
+            &#34;title&#34;: &#34;X100V&#34;,
+            &#34;cover&#34;: &#34;https://static.fatesinger.com/2022/04/4pc5qctiddj2uy6g.png&#34;,
+            &#34;cat&#34;: &#34;Gear&#34;,
+            &#34;brand&#34;: &#34;FujiFilm&#34;,
+        },
+    ]
+---
+
+my gear
+</code></pre><p>Indeed, storing the data in the post’s front matter (metadata) is a convenient and efficient way to manage content using Markdown.</p><h3 id=douban-faves>Douban faves</h3><p>Scan qrcode loginhttps://node.wpista.com/</p><p>input you douban id, click save.</p><p>Click <code>Get integration token</code> will generate a token.</p><p>New content <code>movies/_index.md</code>, replace the token with yours</p><pre tabindex=0><code>---
+title: &#34;Movies&#34;
+description: &#34;hi&#34;
+token: &#34;2bfb9a8d037a7352c9d369b85d33ac83e39a&#34;
+---
+</code></pre><h3 id=douban-subject>Douban Subject</h3><p>Insert subject url with a single line.</p><p><code>https://movie.douban.com/subject/35451890/</code></p><p><div class=doulist-item><div class=doulist-subject><div class=doulist-post><img decoding=async referrerpolicy=no-referrer src=https://dou.img.lithub.cc/movie/35451890.jpg></div><div class=doulist-content><div class=doulist-title><a href=https://movie.douban.com/subject/35451890/ class=cute target=_blank rel="external nofollow">我经过风暴</a></div><div class=rating><span class=allstardark><span class=allstarlight style=width:0%></span></span><span class=rating_nums>0</span></div><div class=abstract>2022 / 中国大陆 / 剧情 家庭 / 秦海燕 / 佟丽娅 吴昱翰</div></div></div></div></p></div><div class="article--tags u-paddingTop20"><a href=/hugo-theme-notability/en/tags/hugo/ class=artile--tag><span>#</span>hugo</a></div><div class=postCat--item><div class=postCat--content><a href=/hugo-theme-notability/en/categories/zine/ class=artile--category>Zine</a><p>hi</p></div></div></div></main><footer class=site--footer><div class=layoutSingleColumn><div class=copyright>Theme by <a href=https://fatesinger.com/74850 target=_blank>bigfa</a>
+© Copyright
+2023</div></div></footer><script type=text/javascript>window.WPD_TOKEN=""</script><script type=text/javascript src=/hugo-theme-notability/ts/app.js defer></script></body></html>
