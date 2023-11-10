@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>hugo on bigfa 的博客</title><link>https://bigfa.github.io/hugo-theme-notability/tags/hugo/</link><description>Recent content in hugo on bigfa 的博客</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Mon, 30 Oct 2023 22:27:17 +0800</lastBuildDate><atom:link href="https://bigfa.github.io/hugo-theme-notability/tags/hugo/index.xml" rel="self" type="application/rss+xml"/><item><title>Hugo 主题 Farallon</title><link>https://bigfa.github.io/hugo-theme-notability/story/hugo-theme-farallon/</link><pubDate>Mon, 30 Oct 2023 21:07:22 +0800</pubDate><guid>https://bigfa.github.io/hugo-theme-notability/story/hugo-theme-farallon/</guid><description>Hugo 主题 Farallon 本主题使用古法制作，不依赖三方框架。
-Hugo 当前版本 0.2.6，最后更新日期 2023/10/30
+Hugo 当前版本 0.3.1，最后更新日期 2023/11/10
 演示地址 使用指南 站点参数设置 以下参数都在[Params]下
 description 类型: 字符串 站点描述
 mainSections 类型：数组 默认值：['story'] 多语言设置 设置配置文件中DefaultContentLanguage参数来选择语音，默认是en，翻译文件在i18n 目录下，支持以下类型，
 en 英文 zh-cn 简体中文 例如想试用简体中文，则设置DefaultContentLanguage为zh-cn
 卡片分类页面使用方法 在content目录下新建你想要使用模版的页面，比如你的分类是travel，则新建categories/travel/_index.md,然后编辑文件，设置layout为travel 即可
---- title: &amp;#34;旅行&amp;#34; description: &amp;#34;旅行体验&amp;#34; layout: travel --- 国内用户特别设置 注意travel 是分类 slug，在重新设置 title 就可以外显单独的分类名了。
-物品列表使用方法 在content目录下新建gears/_index.md，按照下面的格式设置faves字段即可
---- title: &amp;#34;Gears&amp;#34; subtitle: &amp;#34;my fuji gears&amp;#34; date: 2021-03-06T15:39:00-06:00 draft: false faves: [ { &amp;#34;title&amp;#34;: &amp;#34;instax mini 40™&amp;#34;, &amp;#34;cover&amp;#34;: &amp;#34;https://static.fatesinger.com/2023/05/3fmdvfzy5kwu320q.png&amp;#34;, &amp;#34;cat&amp;#34;: &amp;#34;Gear&amp;#34;, &amp;#34;brand&amp;#34;: &amp;#34;FujiFilm&amp;#34;, }, { &amp;#34;title&amp;#34;: &amp;#34;Sofort&amp;#34;, &amp;#34;cover&amp;#34;: &amp;#34;https://static.</description></item><item><title>Hugo 主题 Notability</title><link>https://bigfa.github.io/hugo-theme-notability/story/hugo-theme-notability/</link><pubDate>Mon, 30 Oct 2023 22:27:17 +0800</pubDate><guid>https://bigfa.github.io/hugo-theme-notability/story/hugo-theme-notability/</guid><description>抽时间复活了一下这个远古主题，十分简洁。
+--- title: &amp;#34;旅行&amp;#34; description: &amp;#34;旅行体验&amp;#34; layout: travel --- 搜索 推荐使用algolia，个人小站免费额度够用了。
+站点配置参数，设置成你自己的，主要不要暴露adminKey
+[Params] search= true indexName = &amp;#39;bigfa&amp;#39; searchKey = &amp;#39;b0825b184f45c084e31770fbcc9261f2&amp;#39; searchAPPID = &amp;#39;FX1CAS2SD8&amp;#39; 自动提交编辑.github/workflow/main.yaml
+- name: Search uses: caibingcheng/hugo-algolia2@v1 with: input: &amp;#34;content/zh-cn/story/**&amp;#34; index: &amp;#34;bigfa&amp;#34; apikey: ${{ secrets.ALGOLIA_WRITE_KEY }} appid: &amp;#34;FX1CAS2SD8&amp;#34; 新建一个项目 token，ALGOLIA_WRITE_KEY，值为adminKey</description></item><item><title>Hugo 主题 Notability</title><link>https://bigfa.github.io/hugo-theme-notability/story/hugo-theme-notability/</link><pubDate>Mon, 30 Oct 2023 22:27:17 +0800</pubDate><guid>https://bigfa.github.io/hugo-theme-notability/story/hugo-theme-notability/</guid><description>抽时间复活了一下这个远古主题，十分简洁。
 最新版本0.1.4，最后更新时间2023/10/30.
 首页截图 文章页截图</description></item></channel></rss>
