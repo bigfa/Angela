@@ -41,8 +41,20 @@ Macbook Air M2 2022 可能这个配置可能很多程序员都瞧不起，我目
 蛋白火腿姜粒炒香苗饭 炒饭爱好者觉得这个炒饭也比较一般，没啥特别的，加了两三片火腿就卖一百多，真是无语。
 榕阁 20 年和 21 年是上过黑珍珠的，绝大多数能上大众点评黑珍珠的餐厅都不会踩雷，如今榕阁已经不在黑珍珠榜上了，这样的出品不在榜上也是应该的了，只不过出品水平降了，价格却没降，真的不推荐了。
 价格：1150¥/2 人（无酒水）</description></item><item><title>Hugo 主题 Notability</title><link>https://bigfa.github.io/hugo-theme-notability/story/hugo-theme-notability/</link><pubDate>Mon, 30 Oct 2023 22:27:17 +0800</pubDate><guid>https://bigfa.github.io/hugo-theme-notability/story/hugo-theme-notability/</guid><description>抽时间复活了一下这个远古主题，十分简洁。
-最新版本0.1.4，最后更新时间2023/10/30.
-首页截图 文章页截图</description></item><item><title>深圳湾安达仕酒店</title><link>https://bigfa.github.io/hugo-theme-notability/story/andaz-shenzhen-bay/</link><pubDate>Mon, 30 Oct 2023 13:34:50 +0800</pubDate><guid>https://bigfa.github.io/hugo-theme-notability/story/andaz-shenzhen-bay/</guid><description>深圳湾安达仕酒店 深圳湾安达仕是深圳几家比较新的高端酒店之一，日常价格在 2400 左右，很少打折。这次入住使用了两万积分兑换，环球客给升级到了角房。旁边有工地在施工，算是半工地半湾景吧。这个价位的酒店服务基本上该有的都会有，提前问候到店时间和入住需求，自己大部分时间都是佛系入住，也没强制谈心要求套房，后面有套房券了直接上券再体验一番吧。
+最新版本0.3.0，最后更新时间2023/11/20.
+首页截图 文章页截图 本主题使用古法制作，不依赖三方框架。
+使用指南 站点参数设置 以下参数都在[Params]下
+description 类型: 字符串 站点描述
+mainSections 类型：数组 默认值：['story'] 多语言设置 设置配置文件中DefaultContentLanguage参数来选择语音，默认是en，翻译文件在i18n 目录下，支持以下类型，
+en 英文 zh-cn 简体中文 例如想试用简体中文，则设置DefaultContentLanguage为zh-cn
+状态文章格式 content 目录下创建一个memo文件夹，里面就是正常的文章 md 文件
+hugo new content memo/1.md 站点参数配置
+[Params] mainSections = [&amp;#39;story&amp;#39;,&amp;#39;memo&amp;#39;] 如果你想用其他别名也可以，memo换为你想用的就可以了。
+作者信息 站点配置参数
+[Params] showAuthor = true authorName = &amp;#39;bigfa&amp;#39; authorDescription = &amp;#39;computer loser&amp;#39; authorAvatar = &amp;#39;https://secure.gravatar.com/avatar/2fd7e2e17a671f8e3fade0706e0a667e?s=128&amp;amp;d=mm&amp;amp;r=g&amp;#39; 内链卡片 短代码
+~{~{&amp;lt;link &amp;#34;garden-pavilion&amp;#34;&amp;gt;~}~} 自行取掉多余字符
+榕阁 Garden Pavilion榕阁 周末和领导去吃了一顿柏悦的榕阁，之前看到大众点评上人均消费要七八百一直望而却步，这次趁着住店就体验了一把。先直接说 … 国内用户特别设置 物品列表使用方法 在content目录下新建gears/_index.md，按照下面的格式设置faves字段即可
+--- title: &amp;#34;Gears&amp;#34; subtitle: &amp;#34;my fuji gears&amp;#34; date: 2021-03-06T15:39:00-06:00 draft: false faves: [ { &amp;#34;title&amp;#34;: &amp;#34;instax mini 40™&amp;#34;, &amp;#34;cover&amp;#34;: &amp;#34;https://static.</description></item><item><title>深圳湾安达仕酒店</title><link>https://bigfa.github.io/hugo-theme-notability/story/andaz-shenzhen-bay/</link><pubDate>Mon, 30 Oct 2023 13:34:50 +0800</pubDate><guid>https://bigfa.github.io/hugo-theme-notability/story/andaz-shenzhen-bay/</guid><description>深圳湾安达仕酒店 深圳湾安达仕是深圳几家比较新的高端酒店之一，日常价格在 2400 左右，很少打折。这次入住使用了两万积分兑换，环球客给升级到了角房。旁边有工地在施工，算是半工地半湾景吧。这个价位的酒店服务基本上该有的都会有，提前问候到店时间和入住需求，自己大部分时间都是佛系入住，也没强制谈心要求套房，后面有套房券了直接上券再体验一番吧。
 首先是 Rimowa 打卡 深圳湾万象城来的不少，也知道安达仕就在这里，但这么多次也没看到酒店正门入口，这次打车入住才发现酒店的正门，比较隐蔽，正对着春笋。深圳湾安达仕不是高空大堂设计，可能因为楼体结构的原因，一楼的大堂路线很复杂，特别容易迷路。水疗和餐厅还有单独的电梯直达，可能是为了方便对外营业。
 酒店没有设置传统的前台，而且一组方形的高桌。
 一层公区不小，有不少摆件，适合凹造型拍照。
