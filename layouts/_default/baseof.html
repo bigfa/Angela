@@ -7,6 +7,19 @@
 </head>
 
 <body>
+    <script>
+        window.DEFAULT_THEME = "{{ .Site.Params.defaultTheme }}";
+        if (localStorage.getItem("theme") == null) {
+            localStorage.setItem("theme", window.DEFAULT_THEME);
+        }
+        if (localStorage.getItem("theme") == "dark") {
+            document.querySelector("body").classList.add("dark");
+        }
+        if (localStorage.getItem("theme") == "auto") {
+            document.querySelector("body").classList.add("auto");
+        }
+
+    </script>
     {{ partial "navigation.html" . }}
     <main class="main">
         {{ block "main" . }}{{ end }}

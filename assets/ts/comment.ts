@@ -6,6 +6,7 @@ class farallonComment {
     total_paged: any = 1;
     paged: any = 1;
     constructor() {
+        if (!document.querySelector(".post--ingle__comments")) return;
         this.post_id = document.querySelector(
             ".post--ingle__comments"
         )!.dataset.id;
