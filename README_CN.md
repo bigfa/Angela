@@ -12,7 +12,12 @@ echo "theme = 'notability'" >> hugo.toml
 
 ## Release Note
 
-### 0.1.1
+### 0.3.2
+
+-   增加文章浏览量
+-   增加文章点赞
+
+### 0.3.1
 
 -   增加评论功能
 

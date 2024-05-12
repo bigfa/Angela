@@ -1,4 +1,4 @@
-<article class="articleItem articleItem__withImage">
+<article class="articleItem articleItem__withImage" data-id="{{ .File.UniqueID}}">
     {{ if .Content }}
     {{ $urls := findRE "<img src=\"[^\"|\\\"]*\"" .Content }} {{ if $urls }} {{ $url :=index ($urls) 0 }} {{ $url
         :=(strings.TrimPrefix "<img src=\"" $url) }}
@@ -19,6 +19,10 @@
             {{ range (.GetTerms "categories") }}
             <a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
             {{ end }}
+            {{ end }}
+            {{ if .Site.Params.post_view }}
+            <span class="dot"></span>
+            <span class="article--views"></span>
             {{ end }}
         </div>
     </div>

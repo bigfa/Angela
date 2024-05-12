@@ -12,6 +12,11 @@ echo "theme = 'notability'" >> config.toml
 
 ## Release Note
 
+### 0.3.2
+
+-   add post views
+-   add post like
+
 ### 0.3.1
 
 -   add comment

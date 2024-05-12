@@ -32,6 +32,9 @@ article:
     readingTime:
         other: "reading Time: {{ .Count }} min"
 
+    views:
+        other: " views"
+
 timeFormat:
     second:
         other: sec ago

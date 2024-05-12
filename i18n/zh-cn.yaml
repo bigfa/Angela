@@ -32,6 +32,9 @@ article:
     readingTime:
         other: "阅读时长: {{ .Count }} 分钟"
 
+    views:
+        other: " 次浏览"
+
 timeFormat:
     second:
         other: 秒前

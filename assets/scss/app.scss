@@ -1027,3 +1027,57 @@ a {
 }
 
 @import "modules/comment.scss";
+
+.post--single__action {
+    padding-top: 20px;
+}
+
+.button--like {
+    border: 0;
+    background-color: rgba(0, 0, 0, 0);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    .count {
+        font-size: 14px;
+        margin-left: 3px;
+        font-weight: bold;
+        color: var(--text-gray-medium);
+    }
+    svg {
+        fill: var(--text-gray-medium);
+    }
+    &:hover,
+    &.is-active {
+        svg {
+            fill: var(--main-hover-color);
+        }
+    }
+
+    &.is-active {
+        svg {
+            fill: var(--main-bg-color);
+        }
+        .icon--active {
+            display: block;
+        }
+        .icon--default {
+            display: none;
+        }
+        .count {
+            color: var(--main-hover-color);
+        }
+    }
+    &:hover {
+        .count {
+            color: var(--main-hover-color);
+        }
+    }
+    .icon--active {
+        display: none;
+    }
+
+    .icon--block {
+        display: none;
+    }
+}

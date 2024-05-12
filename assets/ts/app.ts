@@ -586,3 +586,14 @@ if (document.querySelector(".backToTop")) {
         window.scrollTo({ top: 0, behavior: "smooth" });
     });
 }
+
+import farallonActions from "./action.ts";
+
+new farallonActions({
+    singleSelector: ".post--single",
+    articleSelector: ".articleItem",
+    // @ts-ignore
+    text: window.window.viewText,
+    // @ts-ignore
+    actionDomain: window.actionDomain,
+});
