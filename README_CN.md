@@ -12,6 +12,10 @@ echo "theme = 'notability'" >> hugo.toml
 
 ## Release Note
 
+### 0.3.3
+
+-   更新 typescript
+
 ### 0.3.2
 
 -   增加文章浏览量

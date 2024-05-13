@@ -12,6 +12,10 @@ echo "theme = 'notability'" >> config.toml
 
 ## Release Note
 
+### 0.3.3
+
+-   update typescript
+
 ### 0.3.2
 
 -   add post views
