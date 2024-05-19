@@ -1,61 +1,10 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>笔记 on Untitled</title><link>https://bigfa.github.io/hugo-theme-notability/categories/zine/</link><description>Recent content in 笔记 on Untitled</description><generator>Hugo</generator><language>zh-cn</language><lastBuildDate>Sun, 19 May 2024 11:47:50 +0800</lastBuildDate><atom:link href="https://bigfa.github.io/hugo-theme-notability/categories/zine/index.xml" rel="self" type="application/rss+xml"/><item><title>Hugo 主题 Farallon</title><link>https://bigfa.github.io/hugo-theme-notability/story/hugo-theme-farallon/</link><pubDate>Mon, 30 Oct 2023 21:07:22 +0800</pubDate><guid>https://bigfa.github.io/hugo-theme-notability/story/hugo-theme-farallon/</guid><description>Hugo 主题 Farallon 本主题使用古法制作，不依赖三方框架。
-Hugo 当前版本 0.3.1，最后更新日期 2023/11/10
-演示地址 使用指南 站点参数设置 以下参数都在[Params]下
-description 类型: 字符串 站点描述
-mainSections 类型：数组 默认值：['story'] 多语言设置 设置配置文件中DefaultContentLanguage参数来选择语音，默认是en，翻译文件在i18n 目录下，支持以下类型，
-en 英文 zh-cn 简体中文 例如想试用简体中文，则设置DefaultContentLanguage为zh-cn
-状态文章格式 content 目录下创建一个memo文件夹，里面就是正常的文章 md 文件
-hugo new content memo/1.md 站点参数配置
-[Params] mainSections = [&amp;#39;story&amp;#39;,&amp;#39;memo&amp;#39;] 如果你想用其他别名也可以，memo换为你想用的就可以了。
-卡片分类页面使用方法 在content目录下新建你想要使用模版的页面，比如你的分类是travel，则新建categories/travel/_index.md,然后编辑文件，设置layout为travel 即可
---- title: &amp;#34;旅行&amp;#34; description: &amp;#34;旅行体验&amp;#34; layout: travel --- 作者信息 站点配置参数
-[Params] showAuthor = true authorName = &amp;#39;bigfa&amp;#39; authorDescription = &amp;#39;computer loser&amp;#39; authorAvatar = &amp;#39;https://secure.gravatar.com/avatar/2fd7e2e17a671f8e3fade0706e0a667e?s=128&amp;amp;d=mm&amp;amp;r=g&amp;#39; 搜索 推荐使用algolia，个人小站免费额度够用了。</description></item><item><title>再游拙政园</title><link>https://bigfa.github.io/hugo-theme-notability/story/humble-administrators-garden/</link><pubDate>Sun, 19 May 2024 11:47:50 +0800</pubDate><guid>https://bigfa.github.io/hugo-theme-notability/story/humble-administrators-garden/</guid><description>时隔多年再游拙政园，心境有点不一样，不变的仍然是对园林没什么兴趣。</description></item><item><title>Douban Cloudflare Worker</title><link>https://bigfa.github.io/hugo-theme-notability/story/douban-cf-worker/</link><pubDate>Wed, 15 May 2024 17:41:48 +0800</pubDate><guid>https://bigfa.github.io/hugo-theme-notability/story/douban-cf-worker/</guid><description>之前我自己用 nodejs + mysql 写了一个同步豆瓣书影音的服务，但只在一个很隐蔽的地方公开了，主要是流量和数据库压力太大，提供公共服务成本实在是太高，最近在研究 Cloudflare Worker，试着把服务迁移过去，过程中发现几个问题。
-D1 单次请求操作次数是有限制的，最多一千次，读写都算。 Worker 子请求数最多就是 50 次，下载图片是占用这个次数的，初始化的时候如果下载图片基本都会超限失败。 Worker 直接读取 R2 输出图片的话速度很慢。 不过多次测试之后还是找到了使用方法，虽然免费版有各种限制，但限制的都是单次请求，初始化的时候数据比较多，只需要在本地分页之后调用初始化接口就行了，后续使用定时任务同步不会因为请求过多而超限，除非在短时间内标记了大量内容。
-电影
-星际迷航4 0 2028 / 美国 / 动作 科幻 惊悚 冒险 / 克里斯·派恩 扎克瑞·昆图 音乐
-The Tortured Poets Department 6.9 泰勒·斯威夫特 Taylor Swift / 2024 图书
-世上为什么要有图书馆 0 杨素秋 / 2024 / 上海译文出版社</description></item><item><title>Hugo 使用 Cloudflare Worker 实现文章浏览计数与点赞</title><link>https://bigfa.github.io/hugo-theme-notability/story/hugo-cf-worker/</link><pubDate>Mon, 13 May 2024 15:31:20 +0800</pubDate><guid>https://bigfa.github.io/hugo-theme-notability/story/hugo-cf-worker/</guid><description>一直以来我对静态博客都没什么兴趣，主要原因是静态博客都是 MD 文件转网页，各种平台都是大同小异，只展示博文还好，如果实现一些其他计数功能，如点赞评论啥的都要额外部署服务，这样还不如直接用动态博客了。如果有研究过我的 hugo 主题会发现我的数据存储都是使用 Markdown 文章文件的，也算原汁原味的静态博客。
-引入外部服务理论上啥功能都能实现，但那其实和静态博客已经没啥关系了。前阵子 Google domains 停止服务，我就把域名转到了 Cloudflare，顺便研究了一下自带的功能，发现用 Cloudflare 的免费方案搭建一个简单的数据统计服务是没啥成本的，于是就有了本文。
-Cloudflare 免费方案的额度对普通用户来说完全够用，如果不够用付费就好了，毕竟大流量也很容易变现。 Cloudflare Worker 的域名无法直接访问，需要自己绑定域名。 前端调用需要解决跨域问题。 静态博客没有文章 id 的概念，需要设置一个 key，hugo 有个文件路径的 md5 可以作为 UniqueId。 项目地址 直接 git clone 或者 use template.
-需要手动修改 wrangler.toml 设置跨域域名和绑定d1数据库。
-[vars] DOMAIN = &amp;#34;https://bigfa.github.io&amp;#34; 这个域名是你要跨域的域名，可以设置为*，这样就没有任何限制了。
-[[d1_databases]] binding = &amp;#34;DB&amp;#34; database_name = &amp;#34;hugo-cf-d1&amp;#34; database_id = &amp;#34;81e23e8a-3b26-4025-acf8-1123bfd5af74&amp;#34; database_name 和 database_id 是你需要修改的，可在 Cloudflare 后台看到。
-本地开发 Cloudflare 的命令行工具是 wrangler，需要 nodejs 环境。wrangler 使用过程中如果没登陆授权会弹出网页授权，授权即可。
-进入项目目录，安装依赖。
-npm install 创建数据库，如果已经在后台创建则无需执行这一步。</description></item><item><title>重庆 City Walk</title><link>https://bigfa.github.io/hugo-theme-notability/story/chongqing/</link><pubDate>Wed, 24 Apr 2024 15:37:30 +0800</pubDate><guid>https://bigfa.github.io/hugo-theme-notability/story/chongqing/</guid><description>由于胡志明市直飞深圳机票太贵了，所以选择在重庆中转一晚，顺便冲一下携程的国航挑战。重庆这个城市应该来了有三四次了，是我早期去过的几个地方之一，当时重庆主流还是讲方言，现在已经是普通话居多了，也不是很确定，也可能是我现在去的地方和以前不一样了。
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>笔记 on Untitled</title><link>https://bigfa.github.io/hugo-theme-notability/categories/zine/</link><description>Recent content in 笔记 on Untitled</description><generator>Hugo</generator><language>zh-cn</language><lastBuildDate>Sun, 19 May 2024 11:47:50 +0800</lastBuildDate><atom:link href="https://bigfa.github.io/hugo-theme-notability/categories/zine/index.xml" rel="self" type="application/rss+xml"/><item><title>再游拙政园</title><link>https://bigfa.github.io/hugo-theme-notability/story/humble-administrators-garden/</link><pubDate>Sun, 19 May 2024 11:47:50 +0800</pubDate><guid>https://bigfa.github.io/hugo-theme-notability/story/humble-administrators-garden/</guid><description>时隔多年再游拙政园，心境有点不一样，不变的仍然是对园林没什么兴趣。</description></item><item><title>重庆 City Walk</title><link>https://bigfa.github.io/hugo-theme-notability/story/chongqing/</link><pubDate>Wed, 24 Apr 2024 15:37:30 +0800</pubDate><guid>https://bigfa.github.io/hugo-theme-notability/story/chongqing/</guid><description>由于胡志明市直飞深圳机票太贵了，所以选择在重庆中转一晚，顺便冲一下携程的国航挑战。重庆这个城市应该来了有三四次了，是我早期去过的几个地方之一，当时重庆主流还是讲方言，现在已经是普通话居多了，也不是很确定，也可能是我现在去的地方和以前不一样了。
 因为是中转，所以只在重庆住一晚，第二天下午就回深圳，有一个上午的时间来逛逛，这次选择了新晋网红景点，鹅岭公园、鹅岭二厂、李子坝轻轨站这个步行路线，不行顺序一定不要搞错，我这个顺序都是下坡，反向的话那就都是上坡了，爬不完的台阶，绝对会崩溃。
 这几个地方感觉除了鹅岭公园，其他的都没什么意思，鹅岭公园环境不错，有点天然氧吧的意思，逛一逛还是很舒适的。鹅岭二厂就是个假装文艺的地方，拍拍照文艺一下也就这样了。至于李子坝轻轨站，这玩意实在是没什么意思，可能对于一些外地人来说轻轨穿楼确实是难得一见，但实际上看完也就那么回事。
 不过这一路走过来，可以看出重庆旅游局确实是下了点功夫的，一路上标注都很明显，李子坝观景台，姑且就叫观景台吧，也有很多交警在维护秩序，体验确实不错。这两年各地的旅游局都在想法设法打造网红城市，在我看来真的用力过猛了，弥漫着一种最后一割的氛围。
 回深圳的航班选择了走重庆机场的贵宾楼，用的广发的权益，需要提前打电话预约，服务非常好，饭点也有热食，考斯特送到飞机下面，可能是只有我一位的原因，居然还帮我提了行李，大大的好评。
-不出意外的话，后面我还会再来重庆，一方面想体验一下洲际和丽晶，另一方面就是进藏在重庆中转要节省很多钱。随着经济逐渐下行，自己的时间又重新不值钱起来了。</description></item><item><title>丽江金茂凯悦甄选</title><link>https://bigfa.github.io/hugo-theme-notability/story/lijiang-ub/</link><pubDate>Tue, 16 Apr 2024 14:02:14 +0800</pubDate><guid>https://bigfa.github.io/hugo-theme-notability/story/lijiang-ub/</guid><description>玉龙雪山 前阵子去了一躺丽江，本来想坐下玉龙雪山大索道，结果双双身体不适，只能放弃，略可惜。为了能在屋里就看日照金山，所以选择了束河古镇这边的凯悦甄选，其实位置更好的是金茂璞修，但价格太高了，要三四千元一晚，下面的凯悦甄选只要一千，两家是同一个业主。
-本次在丽江住了两晚，第一晚选择了凯悦甄选，第二晚还是选择了洲际，丽江旅游真的首推洲际，洲际的业主和丽江大部分旅游产业都是同一个业主，可以直接原价买大索道门票，千古情之类的都可以直接买票，非常方便。而金茂凯悦甄选在束河古镇这边，不推荐首次来丽江的人，更适合已经来过丽江，想安静度假的人。
-本次是环球客积分兑换入住，升级到雪山景观房，在滇香馆吃了个午餐。酒店体量还是挺大的，硬件不错，养了不少小动物，可以算是亲子友好。另外就是丽江实在是太干燥了，房间面积太大，加湿器开了也没啥作用，第二天鼻子就开始出血了。
-玉龙雪山 不得不说云南真是个旅游的好地方，对于不怎么旅游的人来说，国内游我都推荐云南。现在云南的公路线和铁路线都很完善，真的很方便，当年我在云南旅游，切换城市只能飞机，像泸沽湖这种地方要八个小时的山路。现在通了动车，昆大丽一圈玩下来不要太方便。</description></item><item><title>Singapore City Walk</title><link>https://bigfa.github.io/hugo-theme-notability/story/singapore/</link><pubDate>Mon, 15 Apr 2024 19:03:47 +0800</pubDate><guid>https://bigfa.github.io/hugo-theme-notability/story/singapore/</guid><description>前阵子去了一躺新加坡，堪称最怨种出行。核心原因是我们出行正赶上 Taylor Swift 演唱会前两天，酒店不但天价，而且房间紧张。我们在去的时候深圳不知道 Taylor Swift 要开演唱会，我以为发达国家的消费就是这个样子的。真的超级怨种。现在回想一下，虽然怨种的一批，但是好歹也是发达国家，体验一下也还算可以。还是直接上总结。
-酒店虽然贵，但也没那么夸张，这次出行主要是赶上了演唱会，价格翻了两三倍左右，我是用了凯悦积分兑换的安达仕，四万分两万，当时房价已经五千一晚了，正常平日应该是两千左右，但是因为房间紧张，没有用上套房券，这真的太亏了。
-打车价格我个人觉得还好，长距离的话感觉比国内滴滴专车贵那么一点，个人还是可以接受的，地铁也挺方便的，其实没有网上说的那么夸张。
-餐饮都是在酒店搞定的，价格我觉得和三亚酒店消费差不多吧，一碗牛肉面能卖到两百的水平。。。但酒店餐厅价格还好，人均几百的样子，和深圳差不多。
-语言方面中文的普及程度大大超出我的预料，华人确实多，人民素质接触不多，不太好评价，但也没有啥特别的感觉。
-天气有点热，但本身生活在南方，个人还是比较适应的。总体上说，这地方也没啥可玩的，也就溜达溜达，见识下就完了，生活的话有钱可能还是比较舒适的。</description></item><item><title>胡志明市 City Walk</title><link>https://bigfa.github.io/hugo-theme-notability/story/ho-chi-minh-city/</link><pubDate>Fri, 12 Apr 2024 17:19:21 +0800</pubDate><guid>https://bigfa.github.io/hugo-theme-notability/story/ho-chi-minh-city/</guid><description>先总结，胡志明市没啥好玩的，酒店洼地，人文也没什么可看的，所谓法式风情也就那么点老建筑，但都大同小异，连壮观都谈不上，交通极差，英语普及度一般。胡志明市是越南最大的城市，但景点比较集中，不怕热的话基本上步行即可，但天气实在是太热了，建议超过 1 公里的直接 Grab，体验会好上很多。
-都说越南对中国人不是很友好，但实际体验下来也还好，并没有感到明显的区别对待，当然也很可能和我基本没怎么和本地人对话的缘故，哪怕过海关也只是说了一句话。饮食方便个人觉得还挺合胃口，越南春卷很好吃，粉也不错，我没有外食，吃饭都是在酒店搞定，酒店选择的是西贡洲际，比较老，但位置极佳，去景点基本步行可达。
-另外还体验了越南的热石按摩，我是在酒店体验的，60 分钟四百多块钱，和国内比不好说，但比深圳便宜，去外面的店一两百应该就可以搞定，我是为了方便就直接在酒店体验了。手法一般，并没有感觉到比国内好。
-下面有一些个人建议
-建议提前办理另纸签，节省时间，入境的时候看到有中国同胞在落地签处扯皮，感觉体验极差 Grab 不支持支付宝，可绑 visa，我从曼谷过去的，只绑定了支付宝，结果到了胡志明市默认现金，到了酒店没有现金，十分尴尬，最后从酒店借了一点钱挂了房帐 住国际连锁可刷卡，其他建议现金，防止盗刷，我今天出国几次都没有换现金，全程线上或者刷卡搞定，体验还是不错的 离境不需要太早，新山一机场离市区很近，哪怕堵车时间也还是可控的，Grab 上也有预估时间，值机和过海关速度都还可以，安检需要拖鞋 建议选择国际连锁酒店，一般前台英文都不错，如果需要预约一些本地的服务可以让酒店工作人员帮忙，可完美解决沟通问题 个人觉得安全性还好，摩托车是很多，但并没有遇到飞车党，但我本身也还是比较小心的，走路都靠马路内侧 机票方面返程直飞还是蛮贵的，如果时间充裕建议进行甩尾操作 总体上说，胡志明市还是比较适合中转的，住上一晚基本上就足够了，该逛的都能逛到，再转乘国内航班去富国岛、岘港等都非常方便，要是说专门来胡志明市玩，那就不推荐了。
-City Walk 自然就是暴走，住了 2 晚总共出去了 3 次，白天真的很热，晚上会好一点，但不得不吐槽富士的夜拍能力，边走边拍差不多成功率只要 3 成，拉高 ISO 的话基本没法看了，难受。不过站立手持基本上问题不大,快门速度 1/20s 成功率还是非常高的。下面就是边走边拍的照片了，没有啥特别的，随便看看就好了。</description></item><item><title>关于</title><link>https://bigfa.github.io/hugo-theme-notability/story/about-v2/</link><pubDate>Mon, 15 Jan 2024 23:22:50 +0800</pubDate><guid>https://bigfa.github.io/hugo-theme-notability/story/about-v2/</guid><description>W Kuala Lumpur 2024 bigfa，2012 年开始写博客。
+不出意外的话，后面我还会再来重庆，一方面想体验一下洲际和丽晶，另一方面就是进藏在重庆中转要节省很多钱。随着经济逐渐下行，自己的时间又重新不值钱起来了。</description></item><item><title>关于</title><link>https://bigfa.github.io/hugo-theme-notability/story/about-v2/</link><pubDate>Mon, 15 Jan 2024 23:22:50 +0800</pubDate><guid>https://bigfa.github.io/hugo-theme-notability/story/about-v2/</guid><description>W Kuala Lumpur 2024 bigfa，2012 年开始写博客。
 第二版。</description></item><item><title>Fujifilm X-S20 短期使用体验</title><link>https://bigfa.github.io/hugo-theme-notability/story/fuji-xs20/</link><pubDate>Thu, 09 Nov 2023 18:57:34 +0800</pubDate><guid>https://bigfa.github.io/hugo-theme-notability/story/fuji-xs20/</guid><description>跨年博客下定目标之一是买一台徕卡，当时能也几乎没什么选择，只有 Q2，今年 Q3 发布，价格五万，Q2 也没咋降价，水货全新也要三万多。之前眼看全年已经过去三分之二，三万块也不是我能消费起的了，恰好队友想玩变焦镜头，于是目光转向了富士。可换镜头的新机也就 xt5 和 xs20，这俩机器旗舰店都是缺货状态。
 今天富士已经被炒的不行，各种缺货，官方代理商都需要加价购买，非官代奸商更是加价到离谱，考虑到体积还是选择了 xs20，购买的时候搭配了一颗 xf18 f1.4 镜头，我之前已经写过简单的上手体验。
 富士 XF18mm F1.4 R LM WR富士 XF18mmF1.4 R LM WR 其实这个镜头是先于 XF56 二代拿到的，但是这个没怎么带出去，没啥样片，总 … 上手最让我惊喜的就是体积，居然比 X100V 还要小那么一点，这么小的机身还带防抖，颇有之前奥林巴斯的风范。处理器是最新一代，对焦还是挺可以的，虽然没有 4000 万像素的传感器，但对我来说也足够了。
-优点 5 代处理器对焦很不错 大电池，续航真的可以了 体积超小，重量也不错 有防抖 对象自动检测可用 视频功能相当不错 缺点 没有对焦拨片 按键和转盘较少，切换设置不方便 不是全天候机身 塑料感比较强 美颜功能只能在自动挡使用 总结 C 画幅高 ISO 确实不行，我能接受的也就是 1600，不过拍 RAW 的话 ISO 可以开的更高一点，用 lr 的 AI 降噪搞一搞还是能用的，就是仪式感差点儿。</description></item><item><title>Hugo 主题 Notability</title><link>https://bigfa.github.io/hugo-theme-notability/story/hugo-theme-notability/</link><pubDate>Mon, 30 Oct 2023 22:27:17 +0800</pubDate><guid>https://bigfa.github.io/hugo-theme-notability/story/hugo-theme-notability/</guid><description>抽时间复活了一下这个远古主题，十分简洁。
-最新版本0.3.0，最后更新时间2023/11/20.
-首页截图 文章页截图 本主题使用古法制作，不依赖三方框架。
-演示地址 项目地址 使用指南 站点参数设置 以下参数都在[Params]下
-description 类型: 字符串 站点描述
-mainSections 类型：数组 默认值：['story'] 多语言设置 设置配置文件中DefaultContentLanguage参数来选择语音，默认是en，翻译文件在i18n 目录下，支持以下类型，
-en 英文 zh-cn 简体中文 例如想试用简体中文，则设置DefaultContentLanguage为zh-cn
-状态文章格式 content 目录下创建一个memo文件夹，里面就是正常的文章 md 文件
-hugo new content memo/1.md 站点参数配置
-[Params] mainSections = [&amp;#39;story&amp;#39;,&amp;#39;memo&amp;#39;] 如果你想用其他别名也可以，memo换为你想用的就可以了。
-作者信息 站点配置参数
-[Params] showAuthor = true authorName = &amp;#39;bigfa&amp;#39; authorDescription = &amp;#39;computer loser&amp;#39; authorAvatar = &amp;#39;https://secure.gravatar.com/avatar/2fd7e2e17a671f8e3fade0706e0a667e?s=128&amp;amp;d=mm&amp;amp;r=g&amp;#39; 内链卡片 短代码
-~{~{&amp;lt;link &amp;#34;garden-pavilion&amp;#34;&amp;gt;~}~} 自行取掉多余字符
-榕阁 Garden Pavilion榕阁 周末和领导去吃了一顿柏悦的榕阁，之前看到大众点评上人均消费要七八百一直望而却步，这次趁着住店就体验了一把。先直接说 … 国内用户特别设置 物品列表使用方法 在content目录下新建gears/_index.md，按照下面的格式设置faves字段即可
---- title: &amp;#34;Gears&amp;#34; subtitle: &amp;#34;my fuji gears&amp;#34; date: 2021-03-06T15:39:00-06:00 draft: false faves: [ { &amp;#34;title&amp;#34;: &amp;#34;instax mini 40™&amp;#34;, &amp;#34;cover&amp;#34;: &amp;#34;https://static.</description></item></channel></rss>
+优点 5 代处理器对焦很不错 大电池，续航真的可以了 体积超小，重量也不错 有防抖 对象自动检测可用 视频功能相当不错 缺点 没有对焦拨片 按键和转盘较少，切换设置不方便 不是全天候机身 塑料感比较强 美颜功能只能在自动挡使用 总结 C 画幅高 ISO 确实不行，我能接受的也就是 1600，不过拍 RAW 的话 ISO 可以开的更高一点，用 lr 的 AI 降噪搞一搞还是能用的，就是仪式感差点儿。</description></item></channel></rss>
