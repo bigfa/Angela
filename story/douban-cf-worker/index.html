@@ -18,6 +18,7 @@ R2DOMAIN = &#34;https://db.wpista.com&#34; // R2 绑定域名
 WOKRERDOMAIN = &#34;https://dbapi.wpista.com&#34; // worker 绑定域名
 PAGESIZE = 40 // 每页显示数量
 TYPES = &#34;movie,book,music,game,drama&#34; //初始化数据类型，支持五种，根据你的需要自行设置
+STATUSES = &#34;done,mark,doing&#34; // 状态类型
 TOKEN = &#34;richiscool&#34; // 初始化密钥，为了避免有人恶意调用同步接口，增加了一个token 验证
 
 [[r2_buckets]]
@@ -40,8 +41,9 @@ crons = [&#34;*/30 * * * *&#34;] // 自动同步任务设置规则
 TYPES=movie,music,book,game,drama //初始化数据类型，支持五种，根据你的需要自行设置
 WORKER_URL=https://dbapi.wpista.com // worker 绑定域名
 TOKEN=richiscool // 初始化密钥，为了避免有人恶意调用同步接口，增加了一个token 验证
+STATUSES = done,mark,doing // 状态类型
 </code></pre><p>命令</p><pre tabindex=0><code>npm run init
-</code></pre><p>等待完成即可。</p><h3 id=接口>接口</h3><p>Worker 对外提供了 3 个接口，标记条目列表、单个条目信息、本地化条目封面。</p><ul><li>条目列表<code>/list</code>，支持两个参数 <code>type</code> 和 <code>paged</code>,<code>type</code> 为条目类型，<code>paged</code> 为页码，<code>get</code> 请求。</li><li>单个条目为<code>/:type/:id</code>,<code>type</code> 为类型，<code>id</code> 为条目 <code>id</code>。</li><li>本地化封面接口无序主动调用，在调用上面两个接口时会根据具体情况自动调用。</li></ul><h3 id=前端展示>前端展示</h3><p>和以前一样，强烈建议使用本人全家桶，如果想自行调用则可以参考主题目录下 <code>assets/ts/db.ts</code> 和页面模版文件<code>layout/section.movies.html</code> 的文件。或者直接用 worker 接口自行开发。</p></div><div class=post--single__action><button class="button--like like-btn" aria-label="like the post">
+</code></pre><p>等待完成即可。</p><h3 id=接口>接口</h3><p>Worker 对外提供了 3 个接口，标记条目列表、单个条目信息、本地化条目封面。</p><ul><li>条目列表<code>/list</code>，支持两个参数 <code>type</code> 和 <code>paged</code>,<code>type</code> 为条目类型，<code>status</code> 为状态类型，<code>paged</code> 为页码，<code>get</code> 请求。</li><li>单个条目为<code>/:type/:id</code>,<code>type</code> 为类型，<code>id</code> 为条目 <code>id</code>。</li><li>本地化封面接口无序主动调用，在调用上面两个接口时会根据具体情况自动调用。</li></ul><h3 id=前端展示>前端展示</h3><p>和以前一样，强烈建议使用本人全家桶，如果想自行调用则可以参考主题目录下 <code>assets/ts/db.ts</code> 和页面模版文件<code>layout/section.movies.html</code> 的文件。或者直接用 worker 接口自行开发。</p></div><div class=post--single__action><button class="button--like like-btn" aria-label="like the post">
 <svg class="icon--active" viewBox="0 0 1024 1024" width="32" height="32"><path d="M780.8 204.8c-83.2-44.8-179.2-19.2-243.2 44.8L512 275.2l-25.6-25.6c-64-64-166.4-83.2-243.2-44.8-134.4 70.4-153.6 236.8-57.6 332.8l32 32 153.6 153.6 102.4 102.4c25.6 25.6 57.6 25.6 83.2.0l102.4-102.4 153.6-153.6 32-32C934.4 441.6 915.2 275.2 780.8 204.8z"/></svg>
 <svg class="icon--default" viewBox="0 0 1024 1024" width="32" height="32"><path d="M332.8 249.6c38.4.0 83.2 19.2 108.8 44.8L467.2 320 512 364.8 556.8 320l25.6-25.6c32-32 70.4-44.8 108.8-44.8 19.2.0 38.4 6.4 57.6 12.8 44.8 25.6 70.4 57.6 76.8 108.8 6.4 44.8-6.4 89.6-38.4 121.6L512 774.4 236.8 492.8c-32-32-51.2-76.8-44.8-121.6s38.4-83.2 76.8-108.8C288 256 313.6 249.6 332.8 249.6m0-64C300.8 185.6 268.8 192 243.2 204.8 108.8 275.2 89.6 441.6 185.6 537.6l281.6 281.6C480 832 499.2 838.4 512 838.4s32-6.4 38.4-19.2L832 537.6c96-96 76.8-262.4-57.6-332.8-25.6-12.8-57.6-19.2-89.6-19.2-57.6.0-115.2 25.6-153.6 64L512 275.2l-25.6-25.6c-38.4-38.4-96-64-153.6-64z"/></svg>
 <span class=count></span></button></div><div class="article--tags u-paddingTop20"></div><div class=postCat--item><img src=https://static.fatesinger.com/2023/06/u1ak8xgmyn9ec24r.png class=cover><div class=postCat--content><a href=/hugo-theme-notability/categories/hugo/ class=artile--category>Hugo</a><p>hugo</p></div></div></div></main><footer class=site--footer><div class=layoutSingleColumn><div class=copyright>Theme by <a href=https://fatesinger.com/74850 target=_blank>bigfa</a>
