@@ -4,10 +4,9 @@
 {{ $url :=index ($urls) 0 }}
 {{ $dbtype := replaceRE $regex "$1" $url }}
 {{ $dbid := replaceRE $regex "$2" $url }}
-{{ $dbFetch := getJSON "https://node.wpista.com/v1/outer/" $dbtype "/" $dbid
-"?token=2bfb9a8d037a7352c9d369b85d33ac83e39a" }}
+{{ $dbFetch := getJSON "https://dbapi.wpista.com/" $dbtype "/" $dbid }}
 {{ if $dbFetch }}
-{{ $subject := $dbFetch.data }}
+{{ $subject := $dbFetch }}
 {{ $number := (float $subject.douban_score) }}
 <div class="doulist-item">
     <div class="doulist-subject">

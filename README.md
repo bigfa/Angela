@@ -12,6 +12,10 @@ echo "theme = 'notability'" >> config.toml
 
 ## Release Note
 
+### 0.3.4
+
+-   change douban api to cloudflare worker
+
 ### 0.3.3
 
 -   update typescript

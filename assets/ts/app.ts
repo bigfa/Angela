@@ -1,6 +1,7 @@
 import NOTE_DOUBAN from "./db.ts";
 import noteDate from "./date.ts";
 import farallonActions from "./action.ts";
+import FARALLON_DOUBAN from "./db.ts";
 
 new NOTE_DOUBAN({
     // @ts-ignore
@@ -156,3 +157,5 @@ new farallonActions({
     // @ts-ignore
     actionDomain: window.actionDomain,
 });
+
+new FARALLON_DOUBAN({});

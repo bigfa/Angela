@@ -1,23 +1,41 @@
-class NOTE_DOUBAN {
+interface statusObject {
+    name: string;
+    value: string;
+}
+
+class FARALLON_DOUBAN {
     ver: string;
     type: any;
     finished: boolean;
     paged: number;
-    genre_list: Array<any>;
+    genre_list: Array<statusObject>;
     subjects: Array<any>;
     genre: Array<any>;
-    baseAPI: string = "https://node.wpista.com/v1/outer/";
-    token: string;
+    status: string;
+    baseAPI: string = window.dbAPIBase;
 
     constructor(config: any) {
-        this.ver = "1.0.1";
+        this.ver = "1.0.2";
         this.type = "movie";
+        this.status = "done";
         this.finished = false;
         this.paged = 1;
-        this.genre_list = [];
+        this.genre_list = [
+            {
+                name: "已看",
+                value: "done",
+            },
+            {
+                name: "在看",
+                value: "doing",
+            },
+            {
+                name: "想看",
+                value: "mark",
+            },
+        ];
         this.genre = [];
         this.subjects = [];
-        this.token = config.token;
         this._create();
     }
 
@@ -28,39 +46,17 @@ class NOTE_DOUBAN {
         });
     }
 
-    _fetchGenres() {
-        document.querySelector(".db--genres")!.innerHTML = "";
-        fetch(
-            this.baseAPI + "genres?token=" + this.token + "&type=" + this.type
-        )
-            .then((response) => response.json())
-            .then((t) => {
-                // @ts-ignore
-                if (t.data.length) {
-                    this.genre_list = t.data;
-                    this._renderGenre();
-                }
-            });
-    }
-
     _handleGenreClick() {
         this.on("click", ".db--genreItem", (t: any) => {
             const self = t.currentTarget as HTMLElement;
             if (self.classList.contains("is-active")) {
-                const index = this.genre.indexOf(self.innerText);
-                self.classList.remove("is-active");
-                this.genre.splice(index, 1);
-                this.paged = 1;
-                this.finished = false;
-                this.subjects = [];
-                this._fetchData();
                 return;
             }
             document.querySelector(".db--list")!.innerHTML = "";
             document.querySelector(".lds-ripple")!.classList.remove("u-hide");
 
-            self.classList.add("is-active");
-            this.genre.push(self.innerText);
+            this.status = self.dataset.status || ""; // Provide a default value of an empty string if self.dataset.status is undefined
+            this._renderGenre();
             this.paged = 1;
             this.finished = false;
             this.subjects = [];
@@ -71,10 +67,10 @@ class NOTE_DOUBAN {
 
     _renderGenre() {
         document.querySelector(".db--genres")!.innerHTML = this.genre_list
-            .map((item: any) => {
+            .map((item: statusObject) => {
                 return `<span class="db--genreItem${
-                    this.genre_list.includes(item.name) ? " is-active" : ""
-                }">${item.name}</span>`;
+                    this.status == item.value ? " is-active" : ""
+                }" data-status="${item.value}">${item.name}</span>`;
             })
             .join("");
         this._handleGenreClick();
@@ -83,27 +79,26 @@ class NOTE_DOUBAN {
     _fetchData() {
         fetch(
             this.baseAPI +
-                "faves?token=" +
-                this.token +
+                "list?paged=" +
+                this.paged +
                 "&type=" +
                 this.type +
-                "&paged=" +
-                this.paged +
-                "&genre=" +
-                JSON.stringify(this.genre)
+                "&status=" +
+                this.status
         )
             .then((response) => response.json())
             .then((t: any) => {
-                if (t.data.length) {
+                console.log(t.results);
+                if (t.results.length) {
                     if (
                         document
                             .querySelector(".db--list")!
                             .classList.contains("db--list__card")
                     ) {
-                        this.subjects = [...this.subjects, ...t.data];
+                        this.subjects = [...this.subjects, ...t.results];
                         this._randerDateTemplate();
                     } else {
-                        this.subjects = [...this.subjects, ...t.data];
+                        this.subjects = [...this.subjects, ...t.results];
                         this._randerListTemplate();
                     }
                     document
@@ -211,16 +206,9 @@ class NOTE_DOUBAN {
     _handleNavClick() {
         this.on("click", ".db--navItem", (t: any) => {
             if (t.currentTarget.classList.contains("current")) return;
-            this.genre = [];
+            this.status = "done";
             this.type = t.currentTarget.dataset.type;
-            if (this.type != "book") {
-                this._fetchGenres();
-                document
-                    .querySelector(".db--genres")
-                    ?.classList.remove("u-hide");
-            } else {
-                document.querySelector(".db--genres")!.classList.add("u-hide");
-            }
+            this._renderGenre();
             document.querySelector(".db--list")!.innerHTML = "";
             document.querySelector(".lds-ripple")!.classList.remove("u-hide");
             document
@@ -240,11 +228,7 @@ class NOTE_DOUBAN {
             const container = document.querySelector(
                 ".db--container"
             ) as HTMLElement;
-            if (container.dataset.token) {
-                this.token = container.dataset.token;
-            } else {
-                return;
-            }
+
             const currentNavItem = document.querySelector(
                 ".db--navItem.current"
             );
@@ -260,7 +244,7 @@ class NOTE_DOUBAN {
                     .querySelector(".db--genres")!
                     .classList.remove("u-hide");
             }
-            this._fetchGenres();
+            this._renderGenre();
             this._fetchData();
             this._handleScroll();
             this._handleNavClick();
@@ -272,10 +256,7 @@ class NOTE_DOUBAN {
                 const id = db.dataset.id;
                 const type = db.dataset.type;
                 const nodeParent = db.parentNode as HTMLElement;
-                fetch(
-                    // @ts-ignore
-                    this.baseAPI + `${type}/${id}?token=${this.token}`
-                ).then((response) => {
+                fetch(this.baseAPI + `${type}/${id}`).then((response) => {
                     response.json().then((t) => {
                         if (t.data) {
                             const data = t.data;
@@ -308,11 +289,10 @@ class NOTE_DOUBAN {
     _fetchCollection(item: any) {
         const type = item.dataset.style ? item.dataset.style : "card";
         fetch(
-            // @ts-ignore
-            obvInit.api +
-                "v1/movies?type=" +
+            this.baseAPI +
+                "/list?type=" +
                 item.dataset.type +
-                "&paged=1&genre=&start_time=" +
+                "&paged=1&start_time=" +
                 item.dataset.start +
                 "&end_time=" +
                 item.dataset.end
@@ -387,4 +367,4 @@ class NOTE_DOUBAN {
     }
 }
 
-export default NOTE_DOUBAN;
+export default FARALLON_DOUBAN;
