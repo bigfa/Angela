@@ -1,15 +1,18 @@
-import NOTE_DOUBAN from "./db.ts";
 import noteDate from "./date.ts";
 import farallonActions from "./action.ts";
+import Douban from "./db.ts";
 
-new NOTE_DOUBAN({
-    // @ts-ignore
-    token: window.WPD_TOKEN,
-});
+declare global {
+    interface Window {
+        actionDomain: string;
+        timeFormat: string;
+        dbAPIBase: string;
+        viewText: string;
+    }
+}
 
 new noteDate({
     selector: ".humane--time",
-    //@ts-ignore
     timeFormat: window.timeFormat,
 });
 
@@ -96,22 +99,23 @@ class noteBase {
                     .forEach((item) => {
                         item.classList.remove("is-active");
                     });
-                // @ts-ignore
-                if (item.dataset.actionValue == "dark") {
+                if ((item as HTMLElement).dataset.actionValue == "dark") {
                     localStorage.setItem("theme", "dark");
                     document.querySelector("body")!.classList.remove("auto");
                     document.querySelector("body")!.classList.add("dark");
                     item.classList.add("is-active");
                     //this.showNotice('夜间模式已开启');
-                    // @ts-ignore
-                } else if (item.dataset.actionValue == "light") {
+                } else if (
+                    (item as HTMLElement).dataset.actionValue == "light"
+                ) {
                     localStorage.setItem("theme", "light");
                     document.querySelector("body")!.classList.remove("auto");
                     document.querySelector("body")!.classList.remove("dark");
                     item.classList.add("is-active");
                     //this.showNotice('夜间模式已关闭');
-                    // @ts-ignore
-                } else if (item.dataset.actionValue == "auto") {
+                } else if (
+                    (item as HTMLElement).dataset.actionValue == "auto"
+                ) {
                     localStorage.setItem("theme", "auto");
                     document.querySelector("body")!.classList.remove("dark");
                     document.querySelector("body")!.classList.add("auto");
@@ -128,12 +132,7 @@ class noteBase {
                 ".backToTop"
             ) as HTMLElement;
             window.addEventListener("scroll", () => {
-                const t = window.scrollY || window.pageYOffset;
-                // console.log(t);
-                // const documentHeight = document.body.clientHeight;
-                //const windowHeight = window.innerHeight;
-                // const percent = Math.ceil((t / (documentHeight - windowHeight)) * 100);
-
+                const t = window.scrollY || document.documentElement.scrollTop;
                 t > 200
                     ? backToTop!.classList.add("is-active")
                     : backToTop!.classList.remove("is-active");
@@ -151,8 +150,10 @@ new noteBase();
 new farallonActions({
     singleSelector: ".post--single",
     articleSelector: ".articleItem",
-    // @ts-ignore
-    text: window.window.viewText,
-    // @ts-ignore
+    text: window.viewText,
     actionDomain: window.actionDomain,
+});
+
+new Douban({
+    baseAPI: window.dbAPIBase,
 });

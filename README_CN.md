@@ -12,6 +12,10 @@ echo "theme = 'notability'" >> hugo.toml
 
 ## Release Note
 
+### 0.3.4
+
+-   更新豆瓣 API 到 Cloudflare Worker
+
 ### 0.3.3
 
 -   更新 typescript
