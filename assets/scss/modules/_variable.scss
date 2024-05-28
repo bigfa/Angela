@@ -1,0 +1,99 @@
+:root {
+    --x-height-multiplier: 0;
+    --baseline-multiplier: 0;
+    --main-bg-color: rgba(0, 87, 217);
+    --main-hover-color: rgba(104, 156, 233, 1);
+    --text-main-color: rgba(0, 0, 0, 0.86);
+    --text-gray-medium: rgba(0, 0, 0, 0.7);
+    --text-gray-lightest: rgba(0, 0, 0, 0.55);
+    --text-gray-light: rgba(0, 0, 0, 0.6);
+    --background-gray-light: #f2f4f6;
+    --background-gray-lightest: #fafafa;
+    --background-white: #fff;
+    --main-border-color: rgba(0, 0, 0, 0.1);
+    --main-border-color-light: rgba(0, 0, 0, 0, 0.05);
+}
+
+@media (prefers-color-scheme: dark) {
+    .auto {
+        --main-bg-color: rgba(253, 186, 116, 1);
+        --main-hover-color: rgba(255, 237, 213, 1);
+        --text-main-color: #a1a1aa;
+        --text-gray-medium: rgba(161, 161, 170, 1);
+        --text-gray-light: rgba(113, 113, 122, 1);
+        --text-gray-lightest: rgba(113, 113, 122, 0.95);
+
+        --background-white: #1e1e1e;
+        --background-gray-light: #333;
+        --background-gray-lightest: #000;
+
+        --farallon-griedent-start: #007cf0;
+        --farallon-griedent-end: #00dfd8;
+
+        --main-border-color: rgba(63, 63, 70, 0.6);
+        --main-border-color-light: rgba(63, 63, 70, 0.4);
+    }
+}
+
+.dark {
+    --main-bg-color: rgba(253, 186, 116, 1);
+    --main-hover-color: rgba(255, 237, 213, 1);
+    --text-main-color: #a1a1aa;
+    --text-gray-medium: rgba(161, 161, 170, 1);
+    --text-gray-light: rgba(113, 113, 122, 1);
+    --text-gray-lightest: rgba(113, 113, 122, 0.95);
+
+    --background-white: #1e1e1e;
+    --background-gray-light: #333;
+    --background-gray-lightest: #000;
+
+    --farallon-griedent-start: #007cf0;
+    --farallon-griedent-end: #00dfd8;
+
+    --main-border-color: rgba(63, 63, 70, 0.6);
+    --main-border-color-light: rgba(63, 63, 70, 0.4);
+}
+
+@font-face {
+    font-family: "Open Sans";
+    src: url("../fonts/OpenSans-Regular.woff2") format("woff2"),
+        url("../fonts/OpenSans-Regular.woff") format("woff");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Open Sans";
+    src: url("../fonts/OpenSans-Bold.woff2") format("woff2"),
+        url("../fonts/OpenSans-Bold.woff") format("woff");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Open Sans";
+    src: url("../fonts/OpenSans-Light.woff2") format("woff2"),
+        url("../fonts/OpenSans-Light.woff") format("woff");
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Open Sans";
+    src: url("../fonts/OpenSans-Medium.woff2") format("woff2"),
+        url("../fonts/OpenSans-Medium.woff") format("woff");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "mrs_saint_delafieldregular";
+    src: url("../fonts/mrssaintdelafield-regular-webfont.woff2") format("woff2"),
+        url("../fonts/mrssaintdelafield-regular-webfont.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}

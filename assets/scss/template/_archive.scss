@@ -1,0 +1,124 @@
+.page--archive {
+    padding-top: 30px;
+}
+
+.archive--tagList {
+    display: flex;
+    flex-wrap: wrap;
+}
+.archive--tagItem {
+    margin: 10px;
+    background-color: var(--background-gray-light);
+    padding: 3px 12px;
+    border-radius: 4px;
+    font-size: 14px;
+    color: var(--text-gray-light);
+}
+
+.archive--title__year {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.archive--title__month {
+    font-size: 20px;
+    color: var(--text-gray-light);
+}
+
+.archive--list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+    .archive--item {
+        border: 1px solid var(--main-border-color-light);
+        padding: 15px;
+        border-radius: 10px;
+        .archive--title {
+            line-height: 1.4;
+            font-size: 14px;
+        }
+        .archive--meta {
+            font-size: 12px;
+            color: var(--text-gray-light);
+        }
+        &:hover {
+            background-color: #fafafa;
+            .archive--title {
+                color: var(--main-hover-color);
+            }
+        }
+    }
+    padding: 20px 0;
+}
+
+@media (max-width: 414px) {
+    .archive--list {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+.link-items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+    list-style: none;
+}
+
+.link-item {
+    border-radius: 10px;
+    padding: 15px;
+    .sitename {
+        font-size: 12px;
+        color: var(--text-gray-light);
+        display: flex;
+        flex-direction: column;
+        line-height: 1.5;
+        strong {
+            font-size: 16px;
+            color: var(--text-main-color);
+            margin-bottom: 10px;
+        }
+    }
+    &:hover {
+        background-color: var(--background-gray-lightest);
+    }
+}
+
+.archive--tagList {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.archive--tagItem {
+    margin-right: 15px;
+    margin-bottom: 15px;
+    &:hover {
+        color: var(--main-hover-color);
+    }
+}
+
+.page--headline {
+    font-size: 28px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.tag--header {
+    padding: 30px 0;
+    text-align: center;
+    .post-title {
+        font-size: 28px;
+        font-weight: bold;
+    }
+}
+
+.pagination {
+    padding: 10px 20px;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    .next {
+        margin-left: auto;
+    }
+}

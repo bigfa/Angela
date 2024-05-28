@@ -25,7 +25,7 @@ interface DoubanObject {
 }
 
 class Douban {
-    ver: string;
+    readonly ver: string;
     type: any;
     finished: boolean;
     paged: number;
@@ -169,11 +169,9 @@ class Douban {
             html += `<div class="db--listBydate"><div class="db--titleDate"><div class="db--titleDate__day">${date[1]}</div><div class="db--titleDate__month">${date[0]}</div></div><div class="db--dateList__card">`;
             html += result[key]
                 .map((movie: any) => {
-                    return `<div class="db--item">${
-                        movie.is_top250
-                            ? '<span class="top250">Top 250</span>'
-                            : ""
-                    }<img src="${
+                    return `<div class="db--item${
+                        this.type == "music" ? " db--item__music" : ""
+                    }"><img src="${
                         movie.poster
                     }" referrerpolicy="no-referrer" class="db--image"><div class="db--score ">${
                         movie.douban_score > 0

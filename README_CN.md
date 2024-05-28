@@ -12,6 +12,10 @@ echo "theme = 'notability'" >> hugo.toml
 
 ## Release Note
 
+### 0.3.5
+
+-   重构 `SCSS` 文件
+
 ### 0.3.4
 
 -   更新豆瓣 API 到 Cloudflare Worker
