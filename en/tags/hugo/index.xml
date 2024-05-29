@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Hugo on Untitled</title><link>https://bigfa.github.io/hugo-theme-notability/en/tags/hugo/</link><description>Recent content in Hugo on Untitled</description><generator>Hugo</generator><language>en</language><lastBuildDate>Mon, 30 Oct 2023 21:07:22 +0800</lastBuildDate><atom:link href="https://bigfa.github.io/hugo-theme-notability/en/tags/hugo/index.xml" rel="self" type="application/rss+xml"/><item><title>Hugo Theme Farallon</title><link>https://bigfa.github.io/hugo-theme-notability/en/story/hugo-theme-farallon/</link><pubDate>Mon, 30 Oct 2023 21:07:22 +0800</pubDate><guid>https://bigfa.github.io/hugo-theme-notability/en/story/hugo-theme-farallon/</guid><description>Hugo Theme Farallon This theme is created using ancient methods and does not rely on third-party frameworks.
-Current version 0.2.6，last update 2023/10/30
-Demo Github User Guide Site-wide settings Fields under [Params]
-description Type: string Site description.
-mainSections Type:[string] Default:['story'] Pages places under this/those sections will be shown on homepage and archive page.
-i18n In order to use a language, set DefaultContentLanguage to the language code in the configuration file.</description></item></channel></rss>
