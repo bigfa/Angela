@@ -12,6 +12,10 @@ echo "theme = 'notability'" >> hugo.toml
 
 ## Release Note
 
+### 0.3.6
+
+-   更新目录结构
+
 ### 0.3.5
 
 -   重构 `SCSS` 文件

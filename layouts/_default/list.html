@@ -3,12 +3,12 @@
 <div class="layoutSingleColumn">
     <div class="page--archive">
         {{ range .Pages.ByPublishDate.Reverse.GroupByDate "2006" }}
-        {{ if (where .Pages "Section" "story") }}
+        {{ if (where .Pages "Section" "post") }}
         <h2 class="archive--title__year">{{ .Key }}</h2>
         {{ range .Pages.ByPublishDate.Reverse.GroupByDate "January" }}
         <h3 class="archive--title__month">{{ .Key }}</h3>
         <ul class="archive--list">
-            {{ range ((where .Pages "Section" "story")) }}
+            {{ range ((where .Pages "Section" "post")) }}
             <li class="archive--item">
                 <div class="archive--title">
                     <a href="{{ .RelPermalink }}">

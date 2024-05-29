@@ -12,6 +12,10 @@ echo "theme = 'notability'" >> config.toml
 
 ## Release Note
 
+### 0.3.6
+
+-   update struggle
+
 ### 0.3.5
 
 -   refactor scss
