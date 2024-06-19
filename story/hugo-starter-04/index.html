@@ -1,0 +1,98 @@
+<!doctype html><html lang=zh-cn prefix="og: http://ogp.me/ns#"><head><title>Hugo 简明教程 04 - Untitled</title>
+<meta charset=utf-8><meta http-equiv=X-UA-Compatible content="IE=edge,chrome=1"><meta name=viewport content="width=device-width,initial-scale=1,minimal-ui,shrink-to-fit=no"><link rel=stylesheet href=https://bigfa.github.io/hugo-theme-notability/scss/app.min.91802b9a856f04f7b78eaee5648f65b63e766eab3eee1fde4ab661faef88e9ab.css integrity="sha256-kYArmoVvBPe3jq7lZI9ltj52bqs+7h/eSrZh+u+I6as=" media=screen><link type=image/vnd.microsoft.icon href=/hugo-theme-notability/images/favicon.png rel="shortcut icon"><meta property="og:title" content="Hugo 简明教程 04"><meta property="og:url" content="https://bigfa.github.io/hugo-theme-notability/story/hugo-starter-04/"><meta property="og:image" content><meta property="og:description" content="本文主要讲解 hugo 的部署方法。"><meta property="og:type" content="article"><meta name=twitter:card content="summary_large_image"><meta name=twitter:image:src content><meta name=twitter:title content="Hugo 简明教程 04"><meta name=twitter:description content="本文主要讲解 hugo 的部署方法。"></head><body><script>window.DEFAULT_THEME="",localStorage.getItem("theme")==null&&localStorage.setItem("theme",window.DEFAULT_THEME),localStorage.getItem("theme")=="dark"&&document.querySelector("body").classList.add("dark"),localStorage.getItem("theme")=="auto"&&document.querySelector("body").classList.add("auto")</script><header class="metabar metabar--bordered"><div class="metabar--block layoutSingleColumn" itemprop=publisher itemscope itemtype=https://schema.org/Organization><h1 class=metabar--headline itemprop=logo itemscope itemtype=https://schema.org/ImageObject><a href=https://bigfa.github.io/hugo-theme-notability/ class=metabar--logo><img src=/hugo-theme-notability/images/logo.png class=metabar--logoImage width=38 height=47></a></h1><nav class=site--nav><a href=/hugo-theme-notability/movies/>书影音</a>
+<a href=/hugo-theme-notability/cats/>分类</a>
+<a href=/hugo-theme-notability/archive/>文章</a>
+<a href=/hugo-theme-notability/topics/>标签</a>
+<a href=/hugo-theme-notability/gears/>设备</a>
+<a href=/hugo-theme-notability/about/>关于</a>
+<a href=/hugo-theme-notability/friends/>链接</a></nav><svg class="menu--icon" width="1em" height="1em" viewBox="0 0 24 14" fill="currentcolor" aria-hidden="true"><line x1="24" y1="1" y2="1" stroke="currentcolor" stroke-width="2"/><line x1="24" y1="7" x2="4" y2="7" stroke="currentcolor" stroke-width="2"/><line x1="24" y1="13" x2="8" y2="13" stroke="currentcolor" stroke-width="2"/></svg></div></header><div class=mask></div><main class=main><div class="layoutSingleColumn u-paddingTop50 u-xs-paddingTop15 post--single" data-id=3963327b9a2320fc856c05a16cd624ca><h2 class=article--headline>Hugo 简明教程 04</h2><div class=article--subline>本文主要讲解 hugo 的部署方法。</div><div class=article--meta><time datetime='2024-05-29 17:05:05' class=humane--time>2024-05-29 17:05:05</time>
+<span class=dot></span>
+<a href=/hugo-theme-notability/category/hugo/>Hugo</a>
+<span class=dot></span>
+<span class=article--views></span></div><details class=toc open><summary class=toc-title>目录</summary><nav id=TableOfContents><ul><li><a href=#build-命令详解>build 命令详解</a></li><li><a href=#手动部署>手动部署</a></li><li><a href=#自动部署>自动部署</a><ul><li><a href=#github-pages>Github pages</a></li><li><a href=#cloudflare-pages>Cloudflare pages</a></li><li><a href=#vercel>Vercel</a></li><li><a href=#阿里云-oss>阿里云 oss</a></li></ul></li></ul></nav></details><div class="content graph"><p>本文主要讲解 hugo 的部署方法。</p><h3 id=build-命令详解>build 命令详解</h3><p>除了基础的 <code>hugo build</code> 其实 <code>build</code>命令支持不少参数，下面介绍一下比较有用的参数。</p><pre tabindex=0><code>  -b, --baseURL string             绑定域名, 比如 https://fatesinger.com/
+  -D, --buildDrafts                包含草稿
+  -E, --buildExpired               包含过期内容
+  -F, --buildFuture                包含日期在将来的内容
+  -c, --contentDir string          content 目录，一班不需要改
+      --disableKinds strings       禁用页面类型，同时生成多个站点时有用
+      --gc                         构建完成后移除部分缓存
+      --ignoreCache                忽略缓存
+      --minify                     压缩html
+  -t, --theme strings              要使用的主题，同时生成多个站点时有用
+</code></pre><p>一般来说，默认 <code>hugo build</code> 就可以了，像我这种多平台多域名多主题部署这些参数才有意义。</p><h3 id=手动部署>手动部署</h3><p>绝大部分人都推荐的方法是通过 github actions 自动部署，我个人觉的手动部署也很方便。自动部署也只不过在云端进行手动部署的步骤而已。简单来说 hugo 部署就两步</p><ol><li>使用 <code>hugo build</code> 命令生成 <code>html</code> 文件</li><li>将生成的文件上传到托管平台或者服务器</li></ol><p>执行完构建命令后你可以把生成的 html 文件上传到任何你喜欢的平台。如果你没有特别的需求甚至也不需要用 git 来原理仓库，毕竟对于普通用户来说，各种命令难以理解。</p><p>本地手动部署还有一个优点就是构建速度很快，一般 PC 的配置还是要比服务器的配置强一点，尤其 Mac 的 ssd，构建速度很快。手动上传也可以克服各种网络困难。如果你上传到自己的服务器，那么你还需要部署一个简单的 <code>nginx</code> 服务，因为是纯静态，所以只需要傻瓜配置。</p><h3 id=自动部署>自动部署</h3><p>通过 github actions，联动各个平台进行自动部署，想自动部署都需要使用 git 仓库，需要学习一些基础的 git 命令，或者使用可视化工具，如果你不想学习命令，我推荐使用 github 官方的客户端。</p><p>自动部署的原理都是在云端执行 build 命令，然后通过密钥上传到平台。也可以在平台直接绑定 github 仓库，这样更懒人，但需要自己配置一下构建命令，还是那句话，普通用户直接默认配置足够。</p><h4 id=github-pages>Github pages</h4><p>如果域名都懒得买，我最推荐这个托管平台，直接给你一个<code>*.github.io</code>的域名，虽然百度不收录，但也无所谓了。当然，github pages 是支持绑定域名的，但既然是有域名，我更推荐使用下面的 Cloudflare pages，网络上会更顺畅一些。</p><p>下面是自动部署 github pages 的 action 配置 <code>.github/workflows/main.yml</code>，在<code>.github/workflows/</code>下的 yml 就是 github actions 的配置文件</p><pre tabindex=0><code>name: Bigfa
+
+on:
+    push:
+        branches:
+            - main # master 更新触发
+
+jobs:
+    build-deploy:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v3
+              with:
+                  submodules: recursive
+                  fetch-depth: 0
+
+            - name: Setup Hugo
+              uses: peaceiris/actions-hugo@v2
+              with:
+                  hugo-version: latest
+                  extended: true
+
+            - name: Build
+              run: hugo --gc --minify --cleanDestinationDir --ignoreCache
+
+            - name: Deploy
+              uses: peaceiris/actions-gh-pages@v3
+              with:
+                  personal_token: ${{ secrets.Bigfa }} # personal_token 这里新建一个 https://github.com/settings/tokens
+                  PUBLISH_BRANCH: gh-pages # 推送到当前 gh-pages 分支
+                  PUBLISH_DIR: ./public # hugo 生成到 public 作为跟目录
+                  commit_message: ${{ github.event.head_commit.message }}
+</code></pre><h4 id=cloudflare-pages>Cloudflare pages</h4><p>有域名最推荐，推荐使用全家桶，下面是自动上传到 cloudflare pages 的配置文件<code>.github/workflows/main.yml</code></p><pre tabindex=0><code>name: Bigfa
+
+on:
+    push:
+        branches:
+            - main # master 更新触发
+
+jobs:
+    build-deploy:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v3
+              with:
+                  submodules: recursive
+                  fetch-depth: 0
+
+            - name: Setup Hugo
+              uses: peaceiris/actions-hugo@v2
+              with:
+                  hugo-version: latest
+                  extended: true
+
+            - name: Build notability demo
+              run: hugo --gc --minify --ignoreCache --cleanDestinationDir -b https://cl.wpista.com/
+
+            - name: Publish to Cloudflare Pages
+              uses: cloudflare/pages-action@v1
+              with:
+                  apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+                  accountId: d0a457cef81f6ea340f9ff6ca6b6ff7a
+                  projectName: notability
+                  directory: ./public
+                  # Optional: Enable this if you want to have GitHub Deployments triggered
+                  # gitHubToken: ${{ secrets.GITHUB_TOKEN }}
+                  # Optional: Switch what branch you are publishing to.
+                  # By default this will be the branch which triggered this workflow
+                  # branch: main
+                  # Optional: Change the Wrangler version, allows you to point to a specific version or a tag such as `beta`
+                  wranglerVersion: &#34;3&#34;
+</code></pre><h4 id=vercel>Vercel</h4><p>也不错，但不如 pages</p><h4 id=阿里云-oss>阿里云 oss</h4><p>国内用户推荐</p></div><div class=post--single__action><button class="button--like like-btn" aria-label="like the post">
+<svg class="icon--active" viewBox="0 0 1024 1024" width="32" height="32"><path d="M780.8 204.8c-83.2-44.8-179.2-19.2-243.2 44.8L512 275.2l-25.6-25.6c-64-64-166.4-83.2-243.2-44.8-134.4 70.4-153.6 236.8-57.6 332.8l32 32 153.6 153.6 102.4 102.4c25.6 25.6 57.6 25.6 83.2.0l102.4-102.4 153.6-153.6 32-32C934.4 441.6 915.2 275.2 780.8 204.8z"/></svg>
+<svg class="icon--default" viewBox="0 0 1024 1024" width="32" height="32"><path d="M332.8 249.6c38.4.0 83.2 19.2 108.8 44.8L467.2 320 512 364.8 556.8 320l25.6-25.6c32-32 70.4-44.8 108.8-44.8 19.2.0 38.4 6.4 57.6 12.8 44.8 25.6 70.4 57.6 76.8 108.8 6.4 44.8-6.4 89.6-38.4 121.6L512 774.4 236.8 492.8c-32-32-51.2-76.8-44.8-121.6s38.4-83.2 76.8-108.8C288 256 313.6 249.6 332.8 249.6m0-64C300.8 185.6 268.8 192 243.2 204.8 108.8 275.2 89.6 441.6 185.6 537.6l281.6 281.6C480 832 499.2 838.4 512 838.4s32-6.4 38.4-19.2L832 537.6c96-96 76.8-262.4-57.6-332.8-25.6-12.8-57.6-19.2-89.6-19.2-57.6.0-115.2 25.6-153.6 64L512 275.2l-25.6-25.6c-38.4-38.4-96-64-153.6-64z"/></svg>
+<span class=count></span></button></div><div class="article--tags u-paddingTop20"></div><div class=postCat--item><img src=https://static.fatesinger.com/2023/06/u1ak8xgmyn9ec24r.png class=cover><div class=postCat--content><a href=/hugo-theme-notability/category/hugo/ class=artile--category>Hugo</a><p>The world’s fastest framework for building websites.(I don't believe it)</p></div></div></div></main><footer class=site--footer><div class=layoutSingleColumn><div class=copyright>Theme by <a href=https://fatesinger.com/74850 target=_blank>bigfa</a>
+© 版权所有
+2024</div></div></footer><div class=backToTop><svg xmlns="http://www.w3.org/2000/svg" class="svgIcon" viewBox="0 0 14 14" fill="currentcolor" aria-hidden="true"><path d="M7.50015.425011C7.42998.354396 7.34632.298622 7.25415.261011c-.18314-.074008-.38786-.074008-.571.0C6.59128.298643 6.50795.354423 6.43815.425011L.728147 6.13201c-.13248.14218-.204603.33022-.201175.52452C.530401 6.85084.609113 7.03622.746526 7.17363c.137413.13742.322794.21613.517094.21956C1.45793 7.39661 1.64597 7.32449 1.78815 7.19201l4.428-4.427V13.024C6.21615 13.2229 6.29517 13.4137 6.43582 13.5543 6.57647 13.695 6.76724 13.774 6.96615 13.774 7.16506 13.774 7.35583 13.695 7.49648 13.5543 7.63713 13.4137 7.71615 13.2229 7.71615 13.024V2.76501l4.42795 4.427c.1427.13666.3325.21296.529999999999999.21296C12.8717 7.40497 13.0615 7.32867 13.2041 7.19201 13.3444 7.05126 13.4231 6.86068 13.4231 6.66201 13.4231 6.46334 13.3444 6.27277 13.2041 6.13201L7.50015.425011z"/></svg></div><script type=text/javascript>window.WPD_TOKEN="",window.commentDomain="https://fatesinger.com/__api/v1",window.actionDomain="https://v.wpista.com/",window.viewText=" 次浏览",window.dbAPIBase="https://dbapi.wpista.com/"</script><script type=text/javascript>window.timeFormat={second:"秒前",seconds:"秒前",minute:"",minutes:"",hour:"小时前",hours:"小时前",day:"天前",days:"天前",month:"月前",months:"月前"}</script><script type=text/javascript src=/hugo-theme-notability/ts/bundle.js defer></script></body></html>
