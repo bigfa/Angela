@@ -84,7 +84,20 @@ jobs:
                   projectName: notability
                   directory: ./public
                   wranglerVersion: &#34;3&#34;
-</code></pre><h4 id=vercel>Vercel</h4><p>Vercel 和前两个平台不同，vercel 默认是需要绑定 git 仓库，但是也仍然可以通过 github actions 进行更新。</p><p>默认情况下，vercel 绑定你的 github 仓库，选择 hugo 平台，然后默认输出即可。</p><h4 id=阿里云-oss>阿里云 oss</h4><p>有备案域名的话非常推荐，国内速度可以说是相当快了，不过也有缺点，就是需要计费。如使用阿里云 oss 则可以把图片一起放在项目目录下。</p><pre tabindex=0><code>name: Bigfa
+</code></pre><h4 id=vercel>Vercel</h4><p>Vercel 很棒，但还是和 <code>next.js</code> 是绝配。
+<a href=https://vercel.wpista.com/ target=_blank rel=noopener>我的 vercel 版本</a>
+，默认情况下国内访问速度一般，但能对付用。</p><p>Vercel 和前两个平台不同，vercel 默认是需要绑定 git 仓库，但是也仍然可以通过 github actions 进行更新。</p><p>默认情况下，vercel 绑定你的 github 仓库，选择 hugo 平台，然后默认输出即可。默认情况下 vercel 的 hugo 版本很低，推荐手动指定版本。项目根目录下创建文件 <code>vercel.json</code></p><pre tabindex=0><code>{
+  &#34;build&#34;: {
+    &#34;env&#34;: {
+      &#34;HUGO_VERSION&#34;: &#34;0.125.4&#34;
+    }
+  }
+}
+</code></pre><p>设置环境变量</p><pre tabindex=0><code>Vercel -&gt; Project-&gt; Settings -&gt; Environment Variables
+————
+HUGO_VERSION 0.125.4
+</code></pre><p><img src=//static.fatesinger.com/2024/06/4e1sq5sowwvykc0y.png alt></p><p>这里建议重新设置下 build command,如果你的配置文件中已经配置绑定域名，则可忽略<code>-b</code> 参数。</p><pre tabindex=0><code>hugo --gc --minify -b https://vercel.wpista.com/
+</code></pre><h4 id=阿里云-oss>阿里云 oss</h4><p>有备案域名的话非常推荐，国内速度可以说是相当快了，不过也有缺点，就是需要计费。如使用阿里云 oss 则可以把图片一起放在项目目录下。</p><pre tabindex=0><code>name: Bigfa
 
 on:
     push:
