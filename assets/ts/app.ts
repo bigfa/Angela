@@ -1,7 +1,7 @@
 import noteDate from "./date.ts";
 import farallonActions from "./action.ts";
 import Douban from "./db.ts";
-
+import { farallonComment } from "./comment.ts";
 declare global {
     interface Window {
         actionDomain: string;
@@ -157,4 +157,8 @@ new farallonActions({
 new Douban({
     baseAPI: window.dbAPIBase,
     container: ".db--container",
+});
+
+new farallonComment({
+    actionDomain: window.actionDomain,
 });

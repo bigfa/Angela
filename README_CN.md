@@ -1,6 +1,6 @@
 # Hugo Theme Notability
 
-hugo theme
+a single column hugo theme with cloudflare woker support
 
 ## 使用方法
 
@@ -11,6 +11,10 @@ echo "theme = 'notability'" >> hugo.toml
 ```
 
 ## Release Note
+
+### 0.3.7
+
+-   增加 Cloudflare Worker 评论支持
 
 ### 0.3.6
 

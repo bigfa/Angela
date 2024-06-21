@@ -12,9 +12,13 @@ echo "theme = 'notability'" >> config.toml
 
 ## Release Note
 
+### 0.3.7
+
+-   add cloudflare worker comment system support
+
 ### 0.3.6
 
--   update struggle
+-   update structure
 
 ### 0.3.5
 

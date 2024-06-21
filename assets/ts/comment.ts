@@ -1,31 +1,70 @@
-//@ts-nocheck
-class farallonComment {
+import { farallonHelper } from "./utils";
+interface farallonCommentOptions {
+    actionDomain: string;
+}
+
+export class farallonComment extends farallonHelper {
     loading: boolean = false;
     post_id: any;
     total: any = 0;
     total_paged: any = 1;
     paged: any = 1;
-    constructor() {
+    actionDomain: string;
+    dateFormater: any;
+    constructor(config: farallonCommentOptions) {
+        super();
         if (!document.querySelector(".post--ingle__comments")) return;
-        this.post_id = document.querySelector(
-            ".post--ingle__comments"
-        )!.dataset.id;
+        this.actionDomain = config.actionDomain;
+        this.post_id = (
+            document.querySelector(".post--ingle__comments") as HTMLElement
+        ).dataset.id;
         this.fetchComments();
         this.init();
     }
 
-    fetchComments() {
+    renderComment(item: any, children: any = "", reply: boolean = true) {
+        const replyHtml: string = reply
+            ? `<span class="comment-reply-link u-cursorPointer" onclick="return addComment.moveForm('comment-${
+                  item.comment_id
+              }', '${item.comment_id}', 'respond', '${
+                  (document.querySelector(
+                      ".post--ingle__comments"
+                  ) as HTMLElement)!.dataset.id
+              }')"><svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true" class=""><g><path d="M12 3.786c-4.556 0-8.25 3.694-8.25 8.25s3.694 8.25 8.25 8.25c1.595 0 3.081-.451 4.341-1.233l1.054 1.7c-1.568.972-3.418 1.534-5.395 1.534-5.661 0-10.25-4.589-10.25-10.25S6.339 1.786 12 1.786s10.25 4.589 10.25 10.25c0 .901-.21 1.77-.452 2.477-.592 1.731-2.343 2.477-3.917 2.334-1.242-.113-2.307-.74-3.013-1.647-.961 1.253-2.45 2.011-4.092 1.78-2.581-.363-4.127-2.971-3.76-5.578.366-2.606 2.571-4.688 5.152-4.325 1.019.143 1.877.637 2.519 1.342l1.803.258-.507 3.549c-.187 1.31.761 2.509 2.079 2.629.915.083 1.627-.356 1.843-.99.2-.585.345-1.224.345-1.83 0-4.556-3.694-8.25-8.25-8.25zm-.111 5.274c-1.247-.175-2.645.854-2.893 2.623-.249 1.769.811 3.143 2.058 3.319 1.247.175 2.645-.854 2.893-2.623.249-1.769-.811-3.144-2.058-3.319z"></path></g></svg></span>                            `
+            : "";
+        return `<li class="comment parent" itemtype="http://schema.org/Comment" data-id="${item.comment_id}" itemscope="" itemprop="comment" id="comment-${item.comment_id}">
+                            <div class="comment-body">
+                                <div class="comment-meta">
+                                    <div class="comment--avatar">
+                                        <img src="${item.avatar}" class="avatar"  width=42 height=42 />
+                                    </div>
+                                    <div class="comment--meta">
+                                        <div class="comment--author" itemprop="author">${item.comment_author_name}<span class="dot"></span>
+                                            <div class="comment--time" itemprop="datePublished" datetime="${item.comment_date}">${item.comment_date}</div>
+                                            </div>
+                                            ${replyHtml}
+                                    </div>
+                                </div>
+                                <div class="comment-content" itemprop="description">
+                                    ${item.comment_content}
+                                </div>
+                            </div>
+                            ${children}
+                </li>`;
+    }
+
+    async fetchComments() {
         fetch(
-            window.commentDomain +
-                "/post/" +
-                this.post_id +
-                "/comments?paged=" +
-                this.paged
+            this.actionDomain +
+                "comment/list?paged=" +
+                this.paged +
+                "&post_id=" +
+                this.post_id
         ).then((res) => {
             res.json().then((data) => {
-                const comments = data.payload.comments;
-                this.total = data.payload.total;
-                this.total_paged = data.payload.total_paged;
+                const comments = data.results;
+                this.total = data.total;
+                this.total_paged = data.total_paged;
                 if (this.total_paged > 1) {
                     this.randerNav();
                 }
@@ -37,75 +76,15 @@ class farallonComment {
                         if (item.children) {
                             children = `<ol class="children">${item.children
                                 .map((i) => {
-                                    return `<li class="comment" itemtype="http://schema.org/Comment" data-id="${
-                                        i.id
-                                    }" itemscope="" itemprop="comment" id="comment-${
-                                        i.id
-                                    }">
-                                    <div class="comment-body">
-                                    <div class="comment-meta">
-                                    <div class="comment--avatar">
-                                    ${i.avatar}
-                                    </div>
-                                    <div class="comment--meta">
-                                    <div class="comment--author" itemprop="author">${
-                                        i.comment_author
-                                    }<span class="dot"></span>
-                                    <div class="comment--time humane--time" itemprop="datePublished" datetime="2023-09-22T08:24:25+00:00">${
-                                        i.comment_time
-                                    }</div>
-                                    <span class="comment-reply-link u-cursorPointer " onclick="return addComment.moveForm('comment-${
-                                        i.id
-                                    }', '${i.id}', 'respond', '${
-                                        document.querySelector(
-                                            ".post--ingle__comments"
-                                        )!.dataset.id
-                                    }')"><svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true" class=""><g><path d="M12 3.786c-4.556 0-8.25 3.694-8.25 8.25s3.694 8.25 8.25 8.25c1.595 0 3.081-.451 4.341-1.233l1.054 1.7c-1.568.972-3.418 1.534-5.395 1.534-5.661 0-10.25-4.589-10.25-10.25S6.339 1.786 12 1.786s10.25 4.589 10.25 10.25c0 .901-.21 1.77-.452 2.477-.592 1.731-2.343 2.477-3.917 2.334-1.242-.113-2.307-.74-3.013-1.647-.961 1.253-2.45 2.011-4.092 1.78-2.581-.363-4.127-2.971-3.76-5.578.366-2.606 2.571-4.688 5.152-4.325 1.019.143 1.877.637 2.519 1.342l1.803.258-.507 3.549c-.187 1.31.761 2.509 2.079 2.629.915.083 1.627-.356 1.843-.99.2-.585.345-1.224.345-1.83 0-4.556-3.694-8.25-8.25-8.25zm-.111 5.274c-1.247-.175-2.645.854-2.893 2.623-.249 1.769.811 3.143 2.058 3.319 1.247.175 2.645-.854 2.893-2.623.249-1.769-.811-3.144-2.058-3.319z"></path></g></svg></span>                            </div>
-                            </div>
-                        </div>
-                        <div class="comment-content" itemprop="description">
-                            ${i.comment_text}
-                        </div>
-                    </div>
-        </li>`;
+                                    return this.renderComment(i);
                                 })
                                 .join("")}</ol>`;
                         }
 
-                        return `<li class="comment parent" itemtype="http://schema.org/Comment" data-id="${
-                            item.id
-                        }" itemscope="" itemprop="comment" id="comment-${
-                            item.id
-                        }">
-                            <div class="comment-body">
-                                <div class="comment-meta">
-                                    <div class="comment--avatar">
-                                        ${item.avatar}
-                                    </div>
-                                    <div class="comment--meta">
-                                        <div class="comment--author" itemprop="author">${
-                                            item.comment_author
-                                        }<span class="dot"></span>
-                                            <div class="comment--time humane--time" itemprop="datePublished" datetime="2023-09-22T08:24:25+00:00">${
-                                                item.comment_time
-                                            }</div>
-                                            <span class="comment-reply-link u-cursorPointer " onclick="return addComment.moveForm('comment-${
-                                                item.id
-                                            }', '${item.id}', 'respond', '${
-                            document.querySelector(".post--ingle__comments")!
-                                .dataset.id
-                        }')"><svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true" class=""><g><path d="M12 3.786c-4.556 0-8.25 3.694-8.25 8.25s3.694 8.25 8.25 8.25c1.595 0 3.081-.451 4.341-1.233l1.054 1.7c-1.568.972-3.418 1.534-5.395 1.534-5.661 0-10.25-4.589-10.25-10.25S6.339 1.786 12 1.786s10.25 4.589 10.25 10.25c0 .901-.21 1.77-.452 2.477-.592 1.731-2.343 2.477-3.917 2.334-1.242-.113-2.307-.74-3.013-1.647-.961 1.253-2.45 2.011-4.092 1.78-2.581-.363-4.127-2.971-3.76-5.578.366-2.606 2.571-4.688 5.152-4.325 1.019.143 1.877.637 2.519 1.342l1.803.258-.507 3.549c-.187 1.31.761 2.509 2.079 2.629.915.083 1.627-.356 1.843-.99.2-.585.345-1.224.345-1.83 0-4.556-3.694-8.25-8.25-8.25zm-.111 5.274c-1.247-.175-2.645.854-2.893 2.623-.249 1.769.811 3.143 2.058 3.319 1.247.175 2.645-.854 2.893-2.623.249-1.769-.811-3.144-2.058-3.319z"></path></g></svg></span>                            </div>
-                                    </div>
-                                </div>
-                                <div class="comment-content" itemprop="description">
-                                    ${item.comment_text}
-                                </div>
-                            </div>
-                            ${children}
-                </li>`;
+                        return this.renderComment(item, children);
                     })
                     .join("");
-                document.querySelector(".commentlist ")!.innerHTML = html;
+                document.querySelector(".commentlist")!.innerHTML = html;
             });
         });
     }
@@ -141,6 +120,21 @@ class farallonComment {
 
     private init() {
         if (document.querySelector(".comment-form")) {
+            if (this.getCookie("comment_author") != "") {
+                (document.querySelector("#author") as HTMLInputElement).value =
+                    this.getCookie("comment_author");
+            }
+
+            if (this.getCookie("comment_author_email") != "") {
+                (document.querySelector("#email") as HTMLInputElement).value =
+                    this.getCookie("comment_author_email");
+            }
+
+            if (this.getCookie("comment_author_url") != "") {
+                (document.querySelector("#url") as HTMLInputElement).value =
+                    this.getCookie("comment_author_url");
+            }
+
             document
                 .querySelector(".comment-form")
                 ?.addEventListener("submit", (e) => {
@@ -156,30 +150,22 @@ class farallonComment {
                     formData.forEach(
                         (value, key: any) => (formDataObj[key] = value)
                     );
+                    formDataObj["post_id"] = this.post_id;
                     this.loading = true;
-                    // @ts-ignore
-                    fetch(
-                        window.commentDomain +
-                            "/post/" +
-                            this.post_id +
-                            "/comment",
-                        {
-                            method: "POST",
-                            body: JSON.stringify(formDataObj),
-                            headers: {
-                                // @ts-ignore
-                                // "X-WP-Nonce": obvInit.nonce,
-                                "Content-Type": "application/json",
-                            },
-                        }
-                    )
+                    fetch(this.actionDomain + "comment/insert", {
+                        method: "POST",
+                        body: JSON.stringify(formDataObj),
+                        headers: {
+                            "Content-Type": "application/json",
+                        },
+                    })
                         .then((response) => {
                             return response.json();
                         })
                         .then((data) => {
                             this.loading = false;
                             if (data.status != 200) {
-                                return; //this.showNotice(data.message, "error");
+                                return this.showNotice(data.err, "error");
                             }
                             let a = document.getElementById(
                                     "cancel-comment-reply-link"
@@ -187,37 +173,24 @@ class farallonComment {
                                 i = document.getElementById("respond"),
                                 n = document.getElementById("wp-temp-form-div");
                             const comment = data.data;
-                            const html = `<li class="comment" id="comment-${comment.comment_ID}">
-                        <div class="comment-body comment-body__fresh">
-                            <footer class="comment-meta">
-                                <div class="comment--avatar">
-                                    ${comment.avatar}
-                                </div>
-                                <div class="comment--meta">
-                                    <div class="comment--author">${comment.comment_author}<span class="dot"></span>
-                                    <time>刚刚</time>
-                                    </div>
-                                </div>
-                            </footer>
-                            <div class="comment-content">
-                                ${comment.comment_text}
-                            </div>
-                        </div>
-                    </li>`; // @ts-ignore
-                            const parent_id =
+                            const html = this.renderComment(comment, "", false);
+                            const parent_id = (
                                 document.querySelector(
                                     "#comment_parent"
-                                )?.value;
+                                ) as HTMLInputElement
+                            )?.value;
                             // @ts-ignore
                             (a.style.display = "none"), // @ts-ignore
                                 (a.onclick = null), // @ts-ignore
-                                (document.getElementById(
-                                    "comment_parent"
+                                ((
+                                    document.getElementById(
+                                        "comment_parent"
+                                    ) as HTMLInputElement
                                 ).value = "0"),
                                 n && // @ts-ignore
                                     i && // @ts-ignore
-                                    (n.parentNode.insertBefore(i, n),
-                                    n.parentNode.removeChild(n));
+                                    n.parentNode &&
+                                    n.parentNode.removeChild(n);
                             if (document.querySelector(".comment-body__fresh"))
                                 document
                                     .querySelector(".comment-body__fresh")
@@ -225,7 +198,7 @@ class farallonComment {
                             // @ts-ignore
                             document.getElementById("comment").value = "";
                             // @ts-ignore
-                            if (parent_id != "0") {
+                            if (parent_id != "") {
                                 document
                                     .querySelector(
                                         // @ts-ignore
@@ -248,7 +221,7 @@ class farallonComment {
                             }
 
                             const newComment = document.querySelector(
-                                `#comment-${comment.comment_ID}`
+                                `#comment-${comment.comment_id}`
                             ) as HTMLElement;
 
                             if (newComment) {
@@ -257,11 +230,39 @@ class farallonComment {
                                 });
                             }
 
-                            // this.showNotice("评论成功");
+                            this.setCookie(
+                                "comment_author",
+                                (
+                                    document.querySelector(
+                                        "#author"
+                                    ) as HTMLInputElement
+                                ).value,
+                                1
+                            );
+
+                            this.setCookie(
+                                "comment_author_email",
+                                (
+                                    document.querySelector(
+                                        "#email"
+                                    ) as HTMLInputElement
+                                ).value,
+                                1
+                            );
+
+                            this.setCookie(
+                                "comment_author_url",
+                                (
+                                    document.querySelector(
+                                        "#url"
+                                    ) as HTMLInputElement
+                                ).value,
+                                1
+                            );
+
+                            this.showNotice("评论成功");
                         });
                 });
         }
     }
 }
-
-new farallonComment();
