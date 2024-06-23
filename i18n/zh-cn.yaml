@@ -35,6 +35,9 @@ article:
     views:
         other: " 次浏览"
 
+    nocomment:
+        other: "还没有评论"
+
 timeFormat:
     second:
         other: 秒前

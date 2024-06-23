@@ -35,6 +35,9 @@ article:
     views:
         other: " views"
 
+    nocomment:
+        other: "no comment yet"
+
 timeFormat:
     second:
         other: sec ago

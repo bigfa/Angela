@@ -249,3 +249,24 @@
     display: flex;
     align-items: center;
 }
+
+.post--share {
+    svg {
+        height: 16px;
+        width: 16px;
+        fill: var(--text-color-gray);
+        margin-right: 4px;
+    }
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 35px 0 15px;
+    font-size: 14px;
+    color: var(--text-main-color);
+    line-height: 1.2;
+    .link {
+        margin-left: 4px;
+        border-bottom: 1px dotted var(--main-hover-color);
+    }
+}
