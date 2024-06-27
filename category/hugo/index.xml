@@ -49,7 +49,17 @@ home 首页 page 可以理解为文章详情页和一些指定页面如关于和
 内容管理 众所周知，hugo 的 markdown 文件都在 content 目录下，也就是存放文章的地方，hugo 的作用就是把这些 markdown 文件转换为 html。默认情况下content文件夹下的所有 markdown 文件都会被认为是常规内容页面（RegularPages）。
 当然，我们在实际使用过程中，可能会新建一个 posts 文件夹，或者按日期创建文件夹来管理文件，这个时候就要理解 section 这个概念，简单来说就是一个文章类型，如果常规文章 post 和状态内容 status。在 Hugo 中，顶级目录（content 文件夹下的一级目录）或者是带有 _index.md 文件的任何内容目录都会被认为是section。这里推荐为所有 section 都创建_index.md 文件。
 不过也不是所有的顶级目录都会被视为 section，当在配置中被指定为taxonomies 时，就不会被认为是 section 了，如下配置中，此时顶级目录categories和tags不会被认为是 section。
-[taxonomies] category = &amp;#39;categories&amp;#39; tag = &amp;#39;tags&amp;#39; 我推荐为每个分类都创建一个 markdown 文件，因为 markdown 文件可以存储一些元信息，所以我们可以通过这些文件来个分类设置封面、描述等信息，甚至可以设置单独的模版。</description></item><item><title>使用 Cloudflare Worker 获取豆瓣书影音记录</title><link>https://bigfa.github.io/hugo-theme-notability/story/douban-cf-worker/</link><pubDate>Wed, 15 May 2024 17:41:48 +0800</pubDate><guid>https://bigfa.github.io/hugo-theme-notability/story/douban-cf-worker/</guid><description>本功能直接解决豆瓣书影音记录两大痛点，自动同步和封面本地化，对于普通用户来说，Cloudflare 的免费版足够了，非常推荐使用。
+[taxonomies] category = &amp;#39;categories&amp;#39; tag = &amp;#39;tags&amp;#39; 我推荐为每个分类都创建一个 markdown 文件，因为 markdown 文件可以存储一些元信息，所以我们可以通过这些文件来个分类设置封面、描述等信息，甚至可以设置单独的模版。</description></item><item><title>Hugo 简明教程 01</title><link>https://bigfa.github.io/hugo-theme-notability/story/hugo-starter-01/</link><pubDate>Wed, 29 May 2024 16:51:54 +0800</pubDate><guid>https://bigfa.github.io/hugo-theme-notability/story/hugo-starter-01/</guid><description>首先就是如果你不是没有域名和服务器，我完全不推荐你使用静态网页生成器，简单点说，静态博客能干的动态博客都能干，反过来就差太多了。如果你酷爱使用 markdown 写作，那也有很多支持 markdown 写作的程序和平台。一般来说，使用静态博客的原因：
+不想花钱购买服务器 不想维护服务器 抗拒国内内容审查 折腾的快感 其他的理由什么速度快、方便管理都是扯蛋，对普通用户来说，可视化界面才是王道。至于内容审查那就是不能使用国内服务器，一般没有了国内服务器的速度优势，那其实还不如直接找个托管平台省事。没有可视化界面都绝大部分人来说都是灾难，这也是为什么使用静态网页编译器的都是程序员居多。
+动态博客 wordpress/typecho/ghost 为代表，有可视化界面，方便管理，但需要一台服务器，选择国内云服务器的话一年可能需要几百块。这些程序都是可视化操作，上手及其简单。
+静态网页生成器 一般来说所谓意义上的静态博客都是把 markdown 文件转化为 html，虽然可以使用其他服务实现花里胡哨的各种功能，但那其实和静态网页生成器没任何关系了，因为这些功能放在任何页面都可以使用。而不同程序的区别也仅仅是编译速度和 html 模版引擎的区别而已。我相信绝大多数折腾这玩意的人都只会关系主题长啥样，绝对不会关注 markdown 是怎么转成 html 的。
+优势 我真的说不出来这玩意有啥优势，唯一的优势就是可以省下服务器的钱。如果你想要好的体验，再弄个不错的图床啥的，还是要花钱。
+缺点 没有可视化管理界面 不搭载三方服务无法实现评论等基础功能 图片等媒体管理极其不方便 文档差劲，模版语言非程序员难以理解 想要顺畅使用需要 git 基础知识，使用 github 还需破解网络问题 虽然各种自动部署教程很多，也有可视化 git 客户端，也有专门的 markdown 写作工具，但是显然是需要多个地方配合起来使用，我相信除了折腾的成就感，写作体验真的算是差的了。
+hugo 为啥选择 hugo，仅仅是比较火而已，和其他静态网页生成器并没有本质区别。再次强调我不推荐任何使用传统动态博客程序如 Wordpress 的博主转到 hugo，对于个人博客来说，我觉得什么程序都一样，wordpress 臃肿之类的也只是大部分人的心理作用罢了。
+使用 Hugo 最好搭配一些简单的计算机知识，终端，git 等，这样能极大程度帮助你更好的管理博客。静态博客本质上是 Markdown 文件转 html，长期维护自然就需要管理 md 文件，当然一些写作软件也是支持的。本地调试需要使用终端执行一些命令，需要使用命令行工具。在默认情况下，图片需要手动管理并插入到文章中，和可视化编辑器那种上传插入有很大区别，一些写作软件在配置之后可以实现突破自动上传的功能。
+另外就是自动部署一般都是使用 Github 仓库，需要解决网络问题，托管平台的网络可能有问题，需要额外优化。
+如果你克服了上面的困难，自动部署成功，那么你后面的使用就比较轻松了，只需要管理你的 markdown 文件，其他的应该都已经是自动的了。如果你追求个性，需要修改主题，那么你需要一点计算机知识，如果你想定制一些功能，那么恭喜你，你进入了一个大坑，hugo 的文档写的很差。
+安装 我推荐 mac 用户使用，直接使用 brew 安装即可。</description></item><item><title>使用 Cloudflare Worker 获取豆瓣书影音记录</title><link>https://bigfa.github.io/hugo-theme-notability/story/douban-cf-worker/</link><pubDate>Wed, 15 May 2024 17:41:48 +0800</pubDate><guid>https://bigfa.github.io/hugo-theme-notability/story/douban-cf-worker/</guid><description>本功能直接解决豆瓣书影音记录两大痛点，自动同步和封面本地化，对于普通用户来说，Cloudflare 的免费版足够了，非常推荐使用。
 项目地址 之前我自己用 nodejs + mysql 写了一个同步豆瓣书影音的服务，但只在一个很隐蔽的地方公开了，主要是流量和数据库压力太大，提供公共服务成本实在是太高，最近在研究 Cloudflare Worker，试着把服务迁移过去，过程中发现几个问题。
 D1 单次请求操作次数是有限制的，最多一千次，读写都算。 Worker 子请求数最多就是 50 次，下载图片是占用这个次数的，初始化的时候如果下载图片基本都会超限失败。 Worker 直接读取 R2 输出图片的话速度很慢。 不过多次测试之后还是找到了使用方法，虽然免费版有各种限制，但限制的都是单次请求，初始化的时候数据比较多，只需要在本地分页之后调用初始化接口就行了，后续使用定时任务同步不会因为请求过多而超限，除非在短时间内标记了大量内容。
 电影
