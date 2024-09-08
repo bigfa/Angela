@@ -8,6 +8,7 @@ declare global {
         timeFormat: string;
         dbAPIBase: string;
         viewText: string;
+        noComment: string;
     }
 }
 
@@ -90,7 +91,6 @@ class noteBase {
 </div>`;
 
         document.querySelector("body")!.insertAdjacentHTML("beforeend", html);
-
         document.querySelectorAll(".fixed--theme span").forEach((item) => {
             item.addEventListener("click", () => {
                 if (item.classList.contains("is-active")) return;

@@ -12,6 +12,10 @@ echo "theme = 'notability'" >> hugo.toml
 
 ## Release Note
 
+### 0.3.8
+
+-   更新评论系统
+
 ### 0.3.7
 
 -   增加 Cloudflare Worker 评论支持

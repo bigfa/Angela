@@ -12,6 +12,10 @@ echo "theme = 'notability'" >> config.toml
 
 ## Release Note
 
+### 0.3.8
+
+-   update comment module
+
 ### 0.3.7
 
 -   add cloudflare worker comment system support

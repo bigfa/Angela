@@ -1,28 +1,42 @@
 import { farallonHelper } from "./utils";
 interface farallonCommentOptions {
     actionDomain: string;
+    postSelector?: string;
 }
+
+type Comment = {
+    comment_id: string;
+    comment_author_name: string;
+    comment_author_url: string;
+    comment_date: string;
+    comment_content: string;
+    comment_parent: string;
+    avatar: string;
+    children: Comment[];
+};
 
 export class farallonComment extends farallonHelper {
     loading: boolean = false;
-    post_id: any;
-    total: any = 0;
-    total_paged: any = 1;
-    paged: any = 1;
+    post_id: string = "";
+    total: number = 0;
+    total_paged: number = 1;
+    paged: number = 1;
     actionDomain: string;
+    postSelector: string;
     dateFormater: any;
     constructor(config: farallonCommentOptions) {
         super();
-        if (!document.querySelector(".post--ingle__comments")) return;
+        this.postSelector = config.postSelector || ".post--ingle__comments";
+        if (!document.querySelector(this.postSelector)) return;
         this.actionDomain = config.actionDomain;
         this.post_id = (
-            document.querySelector(".post--ingle__comments") as HTMLElement
-        ).dataset.id;
+            document.querySelector(this.postSelector) as HTMLElement
+        ).dataset.id as string;
         this.fetchComments();
         this.init();
     }
 
-    renderComment(item: any, children: any = "", reply: boolean = true) {
+    renderComment(item: Comment, children: any = "", reply: boolean = true) {
         const replyHtml: string = reply
             ? `<span class="comment-reply-link u-cursorPointer" onclick="return addComment.moveForm('comment-${
                   item.comment_id
@@ -69,22 +83,29 @@ export class farallonComment extends farallonHelper {
                     this.randerNav();
                 }
                 document.querySelector(".comments--title .count")!.innerHTML =
-                    this.total;
-                const html = comments
-                    .map((item: any) => {
-                        let children = "";
-                        if (item.children) {
-                            children = `<ol class="children">${item.children
-                                .map((i) => {
-                                    return this.renderComment(i);
-                                })
-                                .join("")}</ol>`;
-                        }
+                    this.total.toString();
+                if (this.total == 0) {
+                    document.querySelector(
+                        ".commentlist"
+                    )!.innerHTML = `<div class="no--comment">${window.noComment}</div>`;
+                    return;
+                } else {
+                    const html = comments
+                        .map((item: Comment) => {
+                            let children = "";
+                            if (item.children) {
+                                children = `<ol class="children">${item.children
+                                    .map((i: Comment) => {
+                                        return this.renderComment(i);
+                                    })
+                                    .join("")}</ol>`;
+                            }
 
-                        return this.renderComment(item, children);
-                    })
-                    .join("");
-                document.querySelector(".commentlist")!.innerHTML = html;
+                            return this.renderComment(item, children);
+                        })
+                        .join("");
+                    document.querySelector(".commentlist")!.innerHTML = html;
+                }
             });
         });
     }
@@ -105,9 +126,7 @@ export class farallonComment extends farallonHelper {
         document.querySelectorAll(".cnav-item").forEach((item) => {
             item.addEventListener("click", (e) => {
                 if (item.classList.contains("disabled")) return;
-                console.log(item);
                 const action = item.attributes["data-action"].value;
-                console.log(action);
                 if (action == "pre") {
                     this.paged += 1;
                 } else {
