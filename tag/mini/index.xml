@@ -10,9 +10,11 @@
 
 &lt;div class="graph--mixtapeEmbed">
  &lt;a href="https://bigfa.github.io/hugo-theme-notability/story/xf18/" target="_blank" class="mixtapeContent">&lt;span
- class="markup--strong markup--mixtapeEmbed-strong">富士 XF18mm F1.4 R LM WR&lt;/span>&lt;em class="markup--em markup--mixtapeEmbed-em">&lt;p>
-&lt;figure class="grap--figure">
- &lt;img src="//static.fatesinger.com/2023/09/e6zsd2fgagf698b4.jpg" alt="富士 XF18mmF1.4 R LM WR" />
- &lt;figcaption class="imageCaption">富士 XF18mmF1.4 R LM WR&lt;/figcaption>
-&lt;/figure>
-&lt;/p></description></item></channel></rss>
+ class="markup--strong markup--mixtapeEmbed-strong">富士 XF18mm F1.4 R LM WR&lt;/span>&lt;em class="markup--em markup--mixtapeEmbed-em"> 富士 XF18mmF1.4 R LM WR 其实这个镜头是先于 XF56 二代拿到的，但是这个没怎么带出去，没啥样片， …&lt;/em>&lt;/a>
+ 
+ &lt;a href="https://bigfa.github.io/hugo-theme-notability/story/xf18/" target="_blank" class="mixtapeImage"
+ style="background-image:url('https://static.fatesinger.com/2023/09/e6zsd2fgagf698b4.jpg')">&lt;/a>
+ 
+&lt;/div>
+
+&lt;p>上手最让我惊喜的就是体积，居然比 X100V 还要小那么一点，这么小的机身还带防抖，颇有之前奥林巴斯的风范。处理器是最新一代，对焦还是挺可以的，虽然没有 4000 万像素的传感器，但对我来说也足够了。&lt;/p></description></item></channel></rss>
