@@ -1,6 +1,6 @@
 .good--list {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     grid-gap: 10px;
     padding: 30px 0 30px;
 }
@@ -12,17 +12,17 @@
     justify-content: center;
     background: var(--background-gray-light);
     border-radius: 10px;
-    padding: 30px 0 0;
-    flex-direction: column;
+    // padding: 30px 0 0;
+    // flex-direction: column;
     // margin-bottom: 25px;
     .img-spacer {
-        width: 50%;
+        width: 35%;
         position: relative;
         transition: 0.5s;
     }
     &:hover {
         .img-spacer {
-            transform: translate3d(0, -5px, 0);
+            transform: translate3d(5px, 0px, 0);
         }
         .good--actions,
         .good--review {
@@ -33,11 +33,13 @@
 
 .good--name {
     font-size: 14px;
-    padding-bottom: 10px;
+    // padding-bottom: 10px;
     color: var(--text-main-color);
-    margin-top: 10px;
+    // margin-top: 10px;
     line-height: 1.4;
-    width: 92%;
+    margin-left: auto;
+    padding-right: 20px;
+    text-align: right;
     .brand {
         color: var(--text-gray-lightest);
     }
