@@ -9,7 +9,7 @@
                 {{ .Title }}
             </a>
         </h2>
-        <div class="summary">{{ .Summary | truncate 60 }}</div>
+        <div class="summary">{{ .Summary | plainify | truncate 60 }}</div>
         <div class="time"><time datetime='{{.Date.Format "2006-01-02 15:04:01" }}' class="humane--time">{{ .Date
                 | time.Format
                 ":date_long"

@@ -10,7 +10,7 @@
                 }}</a>
         </header>
         <div class="description" itemprop="about">
-            <p>{{ .Summary | truncate 60 }}</p>
+            <p>{{ .Summary | plainify | truncate 60 }}</p>
         </div>
     </div>
 </article>
