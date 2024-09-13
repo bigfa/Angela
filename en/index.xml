@@ -20,7 +20,20 @@
 &lt;/p>
 &lt;h2 id="user-guide">User Guide&lt;/h2>
 &lt;h3 id="site-wide-settings">Site-wide settings&lt;/h3>
-&lt;p>Fields under &lt;code>[Params]&lt;/code>&lt;/p></description></item><item><title>Fujifilm X-S20 long term review</title><link>https://bigfa.github.io/hugo-theme-notability/en/story/fujifilm-xs20-long-term-review/</link><pubDate>Sat, 29 Jun 2024 19:30:05 +0800</pubDate><guid>https://bigfa.github.io/hugo-theme-notability/en/story/fujifilm-xs20-long-term-review/</guid><description>&lt;p>The Fuji X-S20 has been released for nearly a year now, and my own device&amp;rsquo;s shutter count has reached 30,000. I am writing an article to wrap up my experiences, all of which are based on my actual usage.&lt;/p>
+&lt;p>Fields under &lt;code>[Params]&lt;/code>&lt;/p>
+&lt;h4 id="description">description&lt;/h4>
+&lt;ul>
+&lt;li>Type: string&lt;/li>
+&lt;/ul>
+&lt;p>Site description.&lt;/p>
+&lt;h4 id="mainsections">mainSections&lt;/h4>
+&lt;ul>
+&lt;li>Type:&lt;code>[string]&lt;/code>&lt;/li>
+&lt;li>Default:&lt;code>['story']&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;p>Pages places under this/those sections will be shown on homepage and archive page.&lt;/p>
+&lt;h3 id="i18n">i18n&lt;/h3>
+&lt;p>In order to use a language, set &lt;code>DefaultContentLanguage&lt;/code> to the language code in the configuration file.&lt;/p></description></item><item><title>Fujifilm X-S20 long term review</title><link>https://bigfa.github.io/hugo-theme-notability/en/story/fujifilm-xs20-long-term-review/</link><pubDate>Sat, 29 Jun 2024 19:30:05 +0800</pubDate><guid>https://bigfa.github.io/hugo-theme-notability/en/story/fujifilm-xs20-long-term-review/</guid><description>&lt;p>The Fuji X-S20 has been released for nearly a year now, and my own device&amp;rsquo;s shutter count has reached 30,000. I am writing an article to wrap up my experiences, all of which are based on my actual usage.&lt;/p>
 &lt;h3 id="basic-situation">Basic Situation&lt;/h3>
 &lt;p>First of all, &lt;strong>the selection of equipment is a very important part of the enjoyment of photography&lt;/strong>. You may quickly lose interest after the purchase, but it&amp;rsquo;s undeniable that the selection process is extremely joyful. Personally, I don&amp;rsquo;t use a camera bag, rarely use a tripod or flash, mainly do city walks, and one-fourth of the time, I take portraits of my wife. I&amp;rsquo;ve shot over 60,000 shutters on two Fuji cameras. I use the XT-5 approximately half of the time because it has skin beautifying features which I prefer a bit more.&lt;/p></description></item><item><title>Observations on the road to Bali.</title><link>https://bigfa.github.io/hugo-theme-notability/en/story/bali/</link><pubDate>Sun, 21 Jan 2024 11:22:44 +0800</pubDate><guid>https://bigfa.github.io/hugo-theme-notability/en/story/bali/</guid><description>&lt;p>I don&amp;rsquo;t know when traveling started to become all about checking in at locations and taking photos for social media. Reflecting back, I never thought about checking in anywhere when I traveled in the past, nor was there such a thing as looking for designated photo spots. It was just the excitement of visiting a place. Taking photos was simply a way to document the journey, not to travel for the sake of photography. Nowadays, taking photos has become more utilitarian, everything is for the sake of online traffic—photos are standardized and everyone seems happy with that.&lt;/p></description></item><item><title>Friends</title><link>https://bigfa.github.io/hugo-theme-notability/en/friends/</link><pubDate>Mon, 15 Jan 2024 23:22:50 +0800</pubDate><guid>https://bigfa.github.io/hugo-theme-notability/en/friends/</guid><description/></item><item><title>Who am I</title><link>https://bigfa.github.io/hugo-theme-notability/en/about/</link><pubDate>Mon, 15 Jan 2024 23:22:50 +0800</pubDate><guid>https://bigfa.github.io/hugo-theme-notability/en/about/</guid><description>&lt;ul>
 &lt;li>Open Source Contributor&lt;/li>
@@ -46,7 +59,13 @@
  &lt;figcaption class="imageCaption">Park Hyatt ShenZhen&lt;/figcaption>
 &lt;/figure>
 &lt;/p>
-&lt;p>Since successfully completing the Globalist challenge, I have gradually started experiencing Hyatt hotels. In Shenzhen, I only wanted to experience Andaz and Park Hyatt. Last Saturday, I stayed at Park Hyatt Shenzhen. I opted for a cash stay this time, and the price of 2100 RMB on a Saturday was considered reasonable, considering that hotel prices in Shenzhen tend to be higher on weekends.&lt;/p></description></item><item><title>Fujinon XF23mm F1.4 R LM WR Review</title><link>https://bigfa.github.io/hugo-theme-notability/en/story/xf23/</link><pubDate>Thu, 26 Oct 2023 12:46:11 +0800</pubDate><guid>https://bigfa.github.io/hugo-theme-notability/en/story/xf23/</guid><description>&lt;p>
+&lt;p>Since successfully completing the Globalist challenge, I have gradually started experiencing Hyatt hotels. In Shenzhen, I only wanted to experience Andaz and Park Hyatt. Last Saturday, I stayed at Park Hyatt Shenzhen. I opted for a cash stay this time, and the price of 2100 RMB on a Saturday was considered reasonable, considering that hotel prices in Shenzhen tend to be higher on weekends.&lt;/p>
+&lt;p>
+&lt;figure class="grap--figure">
+ &lt;img src="https://static.fatesinger.com/2023/11/661e0wc48e3ifpr4.jpg" alt="Park Hyatt ShenZhen" />
+ &lt;figcaption class="imageCaption">Park Hyatt ShenZhen&lt;/figcaption>
+&lt;/figure>
+&lt;/p></description></item><item><title>Fujinon XF23mm F1.4 R LM WR Review</title><link>https://bigfa.github.io/hugo-theme-notability/en/story/xf23/</link><pubDate>Thu, 26 Oct 2023 12:46:11 +0800</pubDate><guid>https://bigfa.github.io/hugo-theme-notability/en/story/xf23/</guid><description>&lt;p>
 &lt;img src="//static.fatesinger.com/2023/10/34n30fwqhrythqhv.jpg" alt="" />
 &lt;/p>
 &lt;blockquote>
@@ -58,7 +77,8 @@
  &lt;figcaption class="imageCaption">XF23mm F1.4 R LM WR&lt;/figcaption>
 &lt;/figure>
 &lt;/p>
-&lt;p>Now whenever I use a 35mm lens, I have this image in my mind, with a strange sense of sadness.&lt;/p></description></item><item><title>Leica Sofort</title><link>https://bigfa.github.io/hugo-theme-notability/en/story/sofort/</link><pubDate>Thu, 26 Oct 2023 09:32:23 +0800</pubDate><guid>https://bigfa.github.io/hugo-theme-notability/en/story/sofort/</guid><description>&lt;p>
+&lt;p>Now whenever I use a 35mm lens, I have this image in my mind, with a strange sense of sadness.&lt;/p>
+&lt;p>Years ago, when I was using Olympus, I bought a prime lens that was roughly equivalent to 35mm. I didn’t choose this focal length because I particularly liked it, but simply because it was affordable. Later, I used the X100V, buying a camera with a fixed lens just to save money. Now, after nearly two years of using the X100V, I haven’t even taken ten thousand photos, which shows that I am not quite comfortable with this focal length.&lt;/p></description></item><item><title>Leica Sofort</title><link>https://bigfa.github.io/hugo-theme-notability/en/story/sofort/</link><pubDate>Thu, 26 Oct 2023 09:32:23 +0800</pubDate><guid>https://bigfa.github.io/hugo-theme-notability/en/story/sofort/</guid><description>&lt;p>
 &lt;figure class="grap--figure">
  &lt;img src="//static.fatesinger.com/2023/10/b1gdey1f53d7vy0j.jpg" alt="Leica Sofort" />
  &lt;figcaption class="imageCaption">Leica Sofort&lt;/figcaption>

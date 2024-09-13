@@ -20,4 +20,17 @@
 &lt;/p>
 &lt;h2 id="user-guide">User Guide&lt;/h2>
 &lt;h3 id="site-wide-settings">Site-wide settings&lt;/h3>
-&lt;p>Fields under &lt;code>[Params]&lt;/code>&lt;/p></description></item></channel></rss>
+&lt;p>Fields under &lt;code>[Params]&lt;/code>&lt;/p>
+&lt;h4 id="description">description&lt;/h4>
+&lt;ul>
+&lt;li>Type: string&lt;/li>
+&lt;/ul>
+&lt;p>Site description.&lt;/p>
+&lt;h4 id="mainsections">mainSections&lt;/h4>
+&lt;ul>
+&lt;li>Type:&lt;code>[string]&lt;/code>&lt;/li>
+&lt;li>Default:&lt;code>['story']&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;p>Pages places under this/those sections will be shown on homepage and archive page.&lt;/p>
+&lt;h3 id="i18n">i18n&lt;/h3>
+&lt;p>In order to use a language, set &lt;code>DefaultContentLanguage&lt;/code> to the language code in the configuration file.&lt;/p></description></item></channel></rss>

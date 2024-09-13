@@ -32,4 +32,28 @@
 &lt;li>&lt;code>en&lt;/code> 英文&lt;/li>
 &lt;li>&lt;code>zh-cn&lt;/code> 简体中文&lt;/li>
 &lt;/ul>
-&lt;p>例如想试用简体中文，则设置&lt;code>DefaultContentLanguage&lt;/code>为&lt;code>zh-cn&lt;/code>&lt;/p></description></item></channel></rss>
+&lt;p>例如想试用简体中文，则设置&lt;code>DefaultContentLanguage&lt;/code>为&lt;code>zh-cn&lt;/code>&lt;/p>
+&lt;h3 id="状态文章格式">状态文章格式&lt;/h3>
+&lt;p>&lt;code>content&lt;/code> 目录下创建一个&lt;code>memo&lt;/code>文件夹，里面就是正常的文章 md 文件&lt;/p>
+&lt;pre tabindex="0">&lt;code>hugo new content memo/1.md
+&lt;/code>&lt;/pre>&lt;p>站点参数配置&lt;/p>
+&lt;pre tabindex="0">&lt;code>[Params]
+ mainSections = [&amp;#39;story&amp;#39;,&amp;#39;memo&amp;#39;]
+&lt;/code>&lt;/pre>&lt;p>如果你想用其他别名也可以，&lt;code>memo&lt;/code>换为你想用的就可以了。&lt;/p>
+&lt;h3 id="卡片分类页面使用方法">卡片分类页面使用方法&lt;/h3>
+&lt;p>在&lt;code>content&lt;/code>目录下新建你想要使用模版的页面，比如你的分类是&lt;code>travel&lt;/code>，则新建&lt;code>categories/travel/_index.md&lt;/code>,然后编辑文件，设置&lt;code>layout&lt;/code>为&lt;code>travel&lt;/code> 即可&lt;/p>
+&lt;pre tabindex="0">&lt;code>---
+title: &amp;#34;旅行&amp;#34;
+description: &amp;#34;旅行体验&amp;#34;
+layout: travel
+---
+&lt;/code>&lt;/pre>&lt;h3 id="作者信息">作者信息&lt;/h3>
+&lt;p>站点配置参数&lt;/p>
+&lt;pre tabindex="0">&lt;code>[Params]
+ showAuthor = true
+ authorName = &amp;#39;bigfa&amp;#39;
+ authorDescription = &amp;#39;computer loser&amp;#39;
+ authorAvatar = &amp;#39;https://secure.gravatar.com/avatar/2fd7e2e17a671f8e3fade0706e0a667e?s=128&amp;amp;d=mm&amp;amp;r=g&amp;#39;
+&lt;/code>&lt;/pre>&lt;h3 id="搜索">搜索&lt;/h3>
+&lt;p>推荐使用&lt;code>algolia&lt;/code>，个人小站免费额度够用了。&lt;/p>
+&lt;p>站点配置参数，设置成你自己的，主要不要暴露&lt;code>adminKey&lt;/code>&lt;/p></description></item></channel></rss>
