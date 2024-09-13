@@ -12,6 +12,10 @@ echo "theme = 'notability'" >> config.toml
 
 ## Release Note
 
+### 0.3.9
+
+-   add post image zoom
+
 ### 0.3.8
 
 -   update comment module

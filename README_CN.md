@@ -12,6 +12,10 @@ echo "theme = 'notability'" >> hugo.toml
 
 ## Release Note
 
+### 0.3.9
+
+-   增加图片灯箱效果
+
 ### 0.3.8
 
 -   更新评论系统

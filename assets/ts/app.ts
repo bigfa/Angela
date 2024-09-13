@@ -2,6 +2,8 @@ import noteDate from "./date.ts";
 import farallonActions from "./action.ts";
 import Douban from "./db.ts";
 import { farallonComment } from "./comment.ts";
+import imgZoom from "./zoom.ts";
+
 declare global {
     interface Window {
         actionDomain: string;
@@ -9,6 +11,7 @@ declare global {
         dbAPIBase: string;
         viewText: string;
         noComment: string;
+        zoom: boolean;
     }
 }
 
@@ -162,3 +165,7 @@ new Douban({
 new farallonComment({
     actionDomain: window.actionDomain,
 });
+
+if (window.zoom) {
+    new imgZoom();
+}

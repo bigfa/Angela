@@ -12,6 +12,8 @@
     --background-white: #fff;
     --main-border-color: rgba(0, 0, 0, 0.1);
     --main-border-color-light: rgba(0, 0, 0, 0, 0.05);
+    --background-opacity: 0.9;
+    --background-white-opacity: rgba(255, 255, 255, var(--background-opacity));
 }
 
 @media (prefers-color-scheme: dark) {
@@ -32,6 +34,7 @@
 
         --main-border-color: rgba(63, 63, 70, 0.6);
         --main-border-color-light: rgba(63, 63, 70, 0.4);
+        --background-white-opacity: rgba(30, 30, 30, var(--background-opacity));
     }
 }
 
@@ -52,6 +55,7 @@
 
     --main-border-color: rgba(63, 63, 70, 0.6);
     --main-border-color-light: rgba(63, 63, 70, 0.4);
+    --background-white-opacity: rgba(30, 30, 30, var(--background-opacity));
 }
 
 @font-face {
