@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Untitled</title><link>https://bigfa.github.io/hugo-theme-notability/</link><description>Recent content on Untitled</description><generator>Hugo</generator><language>zh-cn</language><lastBuildDate>Sun, 08 Sep 2024 15:45:52 +0800</lastBuildDate><atom:link href="https://bigfa.github.io/hugo-theme-notability/index.xml" rel="self" type="application/rss+xml"/><item><title>Hugo 主题 Farallon</title><link>https://bigfa.github.io/hugo-theme-notability/story/hugo-theme-farallon/</link><pubDate>Mon, 30 Oct 2023 21:07:22 +0800</pubDate><guid>https://bigfa.github.io/hugo-theme-notability/story/hugo-theme-farallon/</guid><description>&lt;p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Untitled</title><link>https://bigfa.github.io/hugo-theme-notability/</link><description>Recent content on Untitled</description><generator>Hugo</generator><language>zh-cn</language><lastBuildDate>Wed, 18 Sep 2024 21:59:43 +0800</lastBuildDate><atom:link href="https://bigfa.github.io/hugo-theme-notability/index.xml" rel="self" type="application/rss+xml"/><item><title>Hugo 主题 Farallon</title><link>https://bigfa.github.io/hugo-theme-notability/story/hugo-theme-farallon/</link><pubDate>Mon, 30 Oct 2023 21:07:22 +0800</pubDate><guid>https://bigfa.github.io/hugo-theme-notability/story/hugo-theme-farallon/</guid><description>&lt;p>
 &lt;figure class="grap--figure">
  &lt;img src="https://static.fatesinger.com/2023/06/u1ak8xgmyn9ec24r.png" alt="Hugo 主题 Farallon" />
  &lt;figcaption class="imageCaption">Hugo 主题 Farallon&lt;/figcaption>
@@ -56,7 +56,19 @@ layout: travel
  authorAvatar = &amp;#39;https://secure.gravatar.com/avatar/2fd7e2e17a671f8e3fade0706e0a667e?s=128&amp;amp;d=mm&amp;amp;r=g&amp;#39;
 &lt;/code>&lt;/pre>&lt;h3 id="搜索">搜索&lt;/h3>
 &lt;p>推荐使用&lt;code>algolia&lt;/code>，个人小站免费额度够用了。&lt;/p>
-&lt;p>站点配置参数，设置成你自己的，主要不要暴露&lt;code>adminKey&lt;/code>&lt;/p></description></item><item><title>RICOH GR IIIx Urban Editon</title><link>https://bigfa.github.io/hugo-theme-notability/story/gr-3x/</link><pubDate>Sun, 08 Sep 2024 15:45:52 +0800</pubDate><guid>https://bigfa.github.io/hugo-theme-notability/story/gr-3x/</guid><description>&lt;p>
+&lt;p>站点配置参数，设置成你自己的，主要不要暴露&lt;code>adminKey&lt;/code>&lt;/p></description></item><item><title>梧桐区 City Walk</title><link>https://bigfa.github.io/hugo-theme-notability/story/xuhui-citywalk/</link><pubDate>Wed, 18 Sep 2024 21:59:43 +0800</pubDate><guid>https://bigfa.github.io/hugo-theme-notability/story/xuhui-citywalk/</guid><description>&lt;p>
+&lt;figure class="grap--figure">
+ &lt;img src="https://static.fatesinger.com/2024/09/85n2e5lqf5h9lvbx.jpg" alt="上海图书馆" />
+ &lt;figcaption class="imageCaption">上海图书馆&lt;/figcaption>
+&lt;/figure>
+&lt;/p>
+&lt;p>上海来过很多次，基本上都靠着外滩转悠，毕竟外地人还是喜欢外滩景观。本次选择住在徐汇，其实之前去新加坡在上海转机住在瑞金洲际，当时没出门逛一逛。&lt;/p>
+&lt;p>
+&lt;figure class="grap--figure">
+ &lt;img src="https://static.fatesinger.com/2024/09/jzulsvh3rkwwhrps.jpg" alt="安福路" />
+ &lt;figcaption class="imageCaption">安福路&lt;/figcaption>
+&lt;/figure>
+&lt;/p></description></item><item><title>RICOH GR IIIx Urban Editon</title><link>https://bigfa.github.io/hugo-theme-notability/story/gr-3x/</link><pubDate>Sun, 08 Sep 2024 15:45:52 +0800</pubDate><guid>https://bigfa.github.io/hugo-theme-notability/story/gr-3x/</guid><description>&lt;p>
 &lt;figure class="grap--figure">
  &lt;img src="https://static.fatesinger.com/2024/09/md7xqs8v0dnmxgjc.jpg" alt="GR IIIx Urban Editon" />
  &lt;figcaption class="imageCaption">GR IIIx Urban Editon&lt;/figcaption>
