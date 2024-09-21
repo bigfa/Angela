@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on Untitled</title><link>https://bigfa.github.io/hugo-theme-notability/archive/</link><description>Recent content in Posts on Untitled</description><generator>Hugo</generator><language>zh-cn</language><lastBuildDate>Wed, 18 Sep 2024 21:59:43 +0800</lastBuildDate><atom:link href="https://bigfa.github.io/hugo-theme-notability/archive/index.xml" rel="self" type="application/rss+xml"/><item><title>Hugo 主题 Farallon</title><link>https://bigfa.github.io/hugo-theme-notability/story/hugo-theme-farallon/</link><pubDate>Mon, 30 Oct 2023 21:07:22 +0800</pubDate><guid>https://bigfa.github.io/hugo-theme-notability/story/hugo-theme-farallon/</guid><description>&lt;p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on Untitled</title><link>https://bigfa.github.io/hugo-theme-notability/archive/</link><description>Recent content in Posts on Untitled</description><generator>Hugo</generator><language>zh-cn</language><lastBuildDate>Sat, 21 Sep 2024 19:49:13 +0800</lastBuildDate><atom:link href="https://bigfa.github.io/hugo-theme-notability/archive/index.xml" rel="self" type="application/rss+xml"/><item><title>Hugo 主题 Farallon</title><link>https://bigfa.github.io/hugo-theme-notability/story/hugo-theme-farallon/</link><pubDate>Mon, 30 Oct 2023 21:07:22 +0800</pubDate><guid>https://bigfa.github.io/hugo-theme-notability/story/hugo-theme-farallon/</guid><description>&lt;p>
 &lt;figure class="grap--figure">
  &lt;img src="https://static.fatesinger.com/2023/06/u1ak8xgmyn9ec24r.png" alt="Hugo 主题 Farallon" />
  &lt;figcaption class="imageCaption">Hugo 主题 Farallon&lt;/figcaption>
@@ -56,7 +56,29 @@ layout: travel
  authorAvatar = &amp;#39;https://secure.gravatar.com/avatar/2fd7e2e17a671f8e3fade0706e0a667e?s=128&amp;amp;d=mm&amp;amp;r=g&amp;#39;
 &lt;/code>&lt;/pre>&lt;h3 id="搜索">搜索&lt;/h3>
 &lt;p>推荐使用&lt;code>algolia&lt;/code>，个人小站免费额度够用了。&lt;/p>
-&lt;p>站点配置参数，设置成你自己的，主要不要暴露&lt;code>adminKey&lt;/code>&lt;/p></description></item><item><title>梧桐区 City Walk</title><link>https://bigfa.github.io/hugo-theme-notability/story/xuhui-citywalk/</link><pubDate>Wed, 18 Sep 2024 21:59:43 +0800</pubDate><guid>https://bigfa.github.io/hugo-theme-notability/story/xuhui-citywalk/</guid><description>&lt;p>
+&lt;p>站点配置参数，设置成你自己的，主要不要暴露&lt;code>adminKey&lt;/code>&lt;/p></description></item><item><title>九寨沟</title><link>https://bigfa.github.io/hugo-theme-notability/story/jiuzhaigou/</link><pubDate>Sat, 21 Sep 2024 19:49:13 +0800</pubDate><guid>https://bigfa.github.io/hugo-theme-notability/story/jiuzhaigou/</guid><description>&lt;p>
+&lt;figure class="grap--figure">
+ &lt;img src="https://static.fatesinger.com/2024/09/yceo5wnetfzgnaay.jpg" alt="九寨沟" />
+ &lt;figcaption class="imageCaption">九寨沟&lt;/figcaption>
+&lt;/figure>
+&lt;/p>
+&lt;p>九寨沟大多数湖泊的形成源于水中所含碳酸钙。远古时代，地球处于冰期时，水中所含碳酸钙质无法凝结，只能随水漂流。到距今约 12000 年前，气候转暖后流水中的碳酸钙质活跃起来，一旦遇到障碍物便附着其上，逐渐积累，形成今天九寨沟中一条条乳白色的钙质堤埂，这些堤埂堆积起来形成堰塞湖。也就是所谓的“海子”。&lt;/p>
+&lt;p>九寨沟分三条沟：日则沟、树正沟、则查洼沟 3 条主沟。景观分布在树正、诺日朗、剑岩、长海、扎如、天海六大景区。&lt;/p>
+&lt;p>
+&lt;figure class="grap--figure">
+ &lt;img src="https://static.fatesinger.com/2024/09/sao3ac7uzc99z93h.jpg" alt="九寨黄龙机场" />
+ &lt;figcaption class="imageCaption">九寨黄龙机场&lt;/figcaption>
+&lt;/figure>
+&lt;/p>
+&lt;p>
+&lt;figure class="grap--figure">
+ &lt;img src="https://static.fatesinger.com/2024/09/lidczwassxlzqs99.jpg" alt="九寨鲁能希尔顿" />
+ &lt;figcaption class="imageCaption">九寨鲁能希尔顿&lt;/figcaption>
+&lt;/figure>
+&lt;/p>
+&lt;p>
+&lt;img src="https://static.fatesinger.com/2024/09/qy5odexouvfxmxyd.jpg" alt="" />
+&lt;/p></description></item><item><title>梧桐区 City Walk</title><link>https://bigfa.github.io/hugo-theme-notability/story/xuhui-citywalk/</link><pubDate>Wed, 18 Sep 2024 21:59:43 +0800</pubDate><guid>https://bigfa.github.io/hugo-theme-notability/story/xuhui-citywalk/</guid><description>&lt;p>
 &lt;figure class="grap--figure">
  &lt;img src="https://static.fatesinger.com/2024/09/85n2e5lqf5h9lvbx.jpg" alt="上海图书馆" />
  &lt;figcaption class="imageCaption">上海图书馆&lt;/figcaption>
@@ -74,34 +96,14 @@ layout: travel
  &lt;figcaption class="imageCaption">GR IIIx Urban Editon&lt;/figcaption>
 &lt;/figure>
 &lt;/p>
-&lt;p>冲。&lt;/p>
+&lt;p>之前看过博友写的一篇文章大致是文笔不好就不能写博客了么，放在摄影也是同理，不会拍照就不配使用相机么。&lt;/p>
+&lt;p>人本质是都是对其他人拙劣的模仿。&lt;/p>
 &lt;p>GR IIIx 基本上继承了 GR III 的优缺点，不同的镜头焦段不一样，GR IIIx 等效 40mm，实际使用下来更适合在城市中使用。&lt;/p>
-&lt;h3 id="优点">优点&lt;/h3>
-&lt;ol>
-&lt;li>体积较小，这么小的体积拥有 ASP-C 画幅，其实已经不需要再说什么了，就是最强口袋机。&lt;/li>
-&lt;li>自带 2Gb 存储，虽然不及哈苏的 1T 偶尔也对付&lt;/li>
-&lt;li>带 ND 虽然没啥用，没人会用这玩意拍慢门吧，但有总比没有好&lt;/li>
-&lt;li>金属机身&lt;/li>
-&lt;li>有微距模式，虽然需要手动切换，但总归是好的&lt;/li>
-&lt;li>正副片预设都不错，高对比黑白个人倒不是很喜欢，大部分时候都是正片。&lt;/li>
-&lt;/ol>
-&lt;h3 id="缺点">缺点&lt;/h3>
-&lt;ol>
-&lt;li>镜头设计非常容易进灰&lt;/li>
-&lt;li>光圈还是略小，要是能大一档给到 F2 就完美了&lt;/li>
-&lt;li>电池续航垃圾，连续拍摄发热严重&lt;/li>
-&lt;li>原厂配件及其昂贵且大部分都是无用的，考虑到官方捆绑配件出售，这一点就非常无语&lt;/li>
-&lt;li>镜头环有点松，官方镜头环价格抢劫&lt;/li>
-&lt;li>对焦太差了，半天对不上焦&lt;/li>
-&lt;li>ADJ 按键设计过于不合理，阻尼过低，经常误触&lt;/li>
-&lt;li>未安装指柄的情况下手指需要按在屏幕上才会有比较舒适的握持感&lt;/li>
-&lt;li>这机器虽然无法连拍，但不支持 uhs-ii 卡槽还是略遗憾，用一张 V30 卡足够了&lt;/li>
-&lt;li>官方 APP 极其拉垮，连接非常难用，而且有设计缺陷，过于耗电。&lt;/li>
-&lt;li>做工拉垮，电池仓毫无安全感，总感觉会坏掉&lt;/li>
-&lt;/ol>
-&lt;p>还有一点就是挂绳孔实在太小了，PD 的扣子很难穿进去。&lt;/p>
-&lt;h3 id="总结">总结&lt;/h3>
-&lt;p>这个系列质感非常可以，但做工真的有待商榷啊。&lt;/p></description></item><item><title>西安 City Walk</title><link>https://bigfa.github.io/hugo-theme-notability/story/xian/</link><pubDate>Thu, 01 Aug 2024 21:27:39 +0800</pubDate><guid>https://bigfa.github.io/hugo-theme-notability/story/xian/</guid><description>&lt;p>
+&lt;p>对于没使用过老款 gr 的用户来说，一切都刚刚好，為了有效縮減 GR III 的體積，當時工程團隊的對策就是取消「AEL/AFL/C‧AF 撥桿」與「曝光補償」按鍵，後者的犧牲在當年一時之間真的很難接受，因為這可是 GRD 一代以來的傳統，當然也成為肌肉反應的一部份。&lt;/p>
+&lt;p>40mm 想近距離拍下高聳的建築並非易事，在郊外或街拍的場合上或許更容易發揮，不必刻意靠近被攝物就能拍下理想的畫面並隱身在城市中，不過以下幾個範例我覺得說服力還不太夠，但也沒有太多時間把雙機同時代出門拍，就請各位單純比較兩者的視角即可。&lt;/p>
+&lt;p>28mm 的 GR III 在微距模式下的最近對焦距離為 6 公分，40mm 的 GR IIIx 在微距模式下的最近對焦距離則為 12 公分，雖然 GR IIIx 的放大倍率不及 GR III，不過卻可以有效避免近拍時可能帶來的變形，以下提供 GR IIIx 在微距開啟前後的最近拍攝結果比較。&lt;/p>
+&lt;p>GR IIIx 延續與 GR III 相同的影像核心，因此有效畫素在 2400 萬，且感光元件採用無低通濾鏡設計，因等效焦距來到 40mm 的緣故，透過裁切可以再獲得 50mm 及 71mm 的視角，畫素分別會降至 1530 萬及 750 萬，不過別擔心～因為是裁切的緣故，這是裡降畫素而非降畫質，只不過把事後裁切這件事交給向機直接處理，請放心使用。&lt;/p>
+&lt;p>GR IIIx 同樣內建了 3 軸 4 級的機身防手震，同時支援拍照與錄影，等效 40mm 的安全快門速度為 1/40s，若啟用機身防手震的話，理論上可用 0.4s 的快門速度來手持拍攝，吉姆分別「開/關」防手震來測試其效果，當防手震開啟後依序拍攝 10 張，再以 100% 原圖檢視的結果是張張清楚，防手震關閉後再拍 10 張的表現則是全軍覆沒，這也是 Ricoh 在吸收 Pentax 之後的技術力展現。&lt;/p></description></item><item><title>西安 City Walk</title><link>https://bigfa.github.io/hugo-theme-notability/story/xian/</link><pubDate>Thu, 01 Aug 2024 21:27:39 +0800</pubDate><guid>https://bigfa.github.io/hugo-theme-notability/story/xian/</guid><description>&lt;p>
 &lt;figure class="grap--figure">
  &lt;img src="https://static.fatesinger.com/2024/08/lt5lps3ctsi4kjeb.jpg" alt="西安" />
  &lt;figcaption class="imageCaption">西安&lt;/figcaption>
