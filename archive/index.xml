@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on Untitled</title><link>https://bigfa.github.io/hugo-theme-notability/archive/</link><description>Recent content in Posts on Untitled</description><generator>Hugo</generator><language>zh-cn</language><lastBuildDate>Sat, 21 Sep 2024 19:49:13 +0800</lastBuildDate><atom:link href="https://bigfa.github.io/hugo-theme-notability/archive/index.xml" rel="self" type="application/rss+xml"/><item><title>Hugo 主题 Farallon</title><link>https://bigfa.github.io/hugo-theme-notability/story/hugo-theme-farallon/</link><pubDate>Mon, 30 Oct 2023 21:07:22 +0800</pubDate><guid>https://bigfa.github.io/hugo-theme-notability/story/hugo-theme-farallon/</guid><description>&lt;p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on Untitled</title><link>https://bigfa.github.io/hugo-theme-notability/archive/</link><description>Recent content in Posts on Untitled</description><generator>Hugo</generator><language>zh-cn</language><lastBuildDate>Tue, 24 Sep 2024 16:28:53 +0800</lastBuildDate><atom:link href="https://bigfa.github.io/hugo-theme-notability/archive/index.xml" rel="self" type="application/rss+xml"/><item><title>Hugo 主题 Farallon</title><link>https://bigfa.github.io/hugo-theme-notability/story/hugo-theme-farallon/</link><pubDate>Mon, 30 Oct 2023 21:07:22 +0800</pubDate><guid>https://bigfa.github.io/hugo-theme-notability/story/hugo-theme-farallon/</guid><description>&lt;p>
 &lt;figure class="grap--figure">
  &lt;img src="https://static.fatesinger.com/2023/06/u1ak8xgmyn9ec24r.png" alt="Hugo 主题 Farallon" />
  &lt;figcaption class="imageCaption">Hugo 主题 Farallon&lt;/figcaption>
@@ -56,7 +56,19 @@ layout: travel
  authorAvatar = &amp;#39;https://secure.gravatar.com/avatar/2fd7e2e17a671f8e3fade0706e0a667e?s=128&amp;amp;d=mm&amp;amp;r=g&amp;#39;
 &lt;/code>&lt;/pre>&lt;h3 id="搜索">搜索&lt;/h3>
 &lt;p>推荐使用&lt;code>algolia&lt;/code>，个人小站免费额度够用了。&lt;/p>
-&lt;p>站点配置参数，设置成你自己的，主要不要暴露&lt;code>adminKey&lt;/code>&lt;/p></description></item><item><title>九寨沟</title><link>https://bigfa.github.io/hugo-theme-notability/story/jiuzhaigou/</link><pubDate>Sat, 21 Sep 2024 19:49:13 +0800</pubDate><guid>https://bigfa.github.io/hugo-theme-notability/story/jiuzhaigou/</guid><description>&lt;p>
+&lt;p>站点配置参数，设置成你自己的，主要不要暴露&lt;code>adminKey&lt;/code>&lt;/p></description></item><item><title>麦积山仿古</title><link>https://bigfa.github.io/hugo-theme-notability/story/maijishan/</link><pubDate>Tue, 24 Sep 2024 16:28:53 +0800</pubDate><guid>https://bigfa.github.io/hugo-theme-notability/story/maijishan/</guid><description>&lt;p>
+&lt;figure class="grap--figure">
+ &lt;img src="https://static.fatesinger.com/2024/09/n1pq6dns80gkt1t5.jpg" alt="麦积山石窟" />
+ &lt;figcaption class="imageCaption">麦积山石窟&lt;/figcaption>
+&lt;/figure>
+&lt;/p>
+&lt;p>交通方便，一般都是从兰州或者西安过去，到天水南站都是一个半小时左右，然后打车到麦积山游客中心的话在一小时之内。&lt;/p>
+&lt;p>
+&lt;figure class="grap--figure">
+ &lt;img src="https://static.fatesinger.com/2024/09/7r5cwpbgzqtpzwv3.jpg" alt="导览图" />
+ &lt;figcaption class="imageCaption">导览图&lt;/figcaption>
+&lt;/figure>
+&lt;/p></description></item><item><title>九寨沟</title><link>https://bigfa.github.io/hugo-theme-notability/story/jiuzhaigou/</link><pubDate>Sat, 21 Sep 2024 19:49:13 +0800</pubDate><guid>https://bigfa.github.io/hugo-theme-notability/story/jiuzhaigou/</guid><description>&lt;p>
 &lt;figure class="grap--figure">
  &lt;img src="https://static.fatesinger.com/2024/09/yceo5wnetfzgnaay.jpg" alt="九寨沟" />
  &lt;figcaption class="imageCaption">九寨沟&lt;/figcaption>
