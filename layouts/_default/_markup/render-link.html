@@ -4,9 +4,9 @@
 {{ $url :=index ($urls) 0 }}
 {{ $dbtype := replaceRE $regex "$1" $url }}
 {{ $dbid := replaceRE $regex "$2" $url }}
-{{ $dbFetch := getJSON "https://dbapi.wpista.com/" $dbtype "/" $dbid }}
-{{ if $dbFetch }}
-{{ $subject := $dbFetch }}
+{{ $url := printf "https://dbapi.wpista.com/%s/%s" $dbtype $dbid }}
+{{ with resources.GetRemote $url }}
+{{ $subject :=. | transform.Unmarshal }}
 {{ $number := (float $subject.douban_score) }}
 <div class="doulist-item">
     <div class="doulist-subject">
@@ -15,7 +15,7 @@
             <div class="doulist-title"><a href="{{ $subject.link }}" class="cute" target="_blank"
                     rel="external nofollow">{{ $subject.name }}</a></div>
             <div class="rating"><span class="allstardark"><span class="allstarlight"
-                        style="width:{{ mul $number 10 }}%"></span></span><span class="rating_nums">{{
+                        style="--width: {{ mul $number 10 }}%"></span></span><span class="rating_nums">{{
                     $subject.douban_score }}</span>
             </div>
             <div class="abstract">{{ $subject.card_subtitle }}</div>
