@@ -56,10 +56,10 @@ layout: travel
  authorAvatar = &amp;#39;https://secure.gravatar.com/avatar/2fd7e2e17a671f8e3fade0706e0a667e?s=128&amp;amp;d=mm&amp;amp;r=g&amp;#39;
 &lt;/code>&lt;/pre>&lt;h3 id="搜索">搜索&lt;/h3>
 &lt;p>推荐使用&lt;code>algolia&lt;/code>，个人小站免费额度够用了。&lt;/p>
-&lt;p>站点配置参数，设置成你自己的，主要不要暴露&lt;code>adminKey&lt;/code>&lt;/p></description></item><item><title>Hugo 主题 Hero</title><link>https://bigfa.github.io/hugo-theme-notability/story/hugo-theme-hera/</link><pubDate>Fri, 03 Jan 2025 13:36:45 +0800</pubDate><guid>https://bigfa.github.io/hugo-theme-notability/story/hugo-theme-hera/</guid><description>&lt;p>
+&lt;p>站点配置参数，设置成你自己的，主要不要暴露&lt;code>adminKey&lt;/code>&lt;/p></description></item><item><title>Hugo 主题 Hera</title><link>https://bigfa.github.io/hugo-theme-notability/story/hugo-theme-hera/</link><pubDate>Fri, 03 Jan 2025 13:36:45 +0800</pubDate><guid>https://bigfa.github.io/hugo-theme-notability/story/hugo-theme-hera/</guid><description>&lt;p>
 &lt;figure class="grap--figure">
- &lt;img src="https://static.fatesinger.com/2024/12/2u80bhyxkmru4o9j.png" alt="Hugo 主题 Hero" />
- &lt;figcaption class="imageCaption">Hugo 主题 Hero&lt;/figcaption>
+ &lt;img src="https://static.fatesinger.com/2024/12/2u80bhyxkmru4o9j.png" alt="Hugo 主题 Hera" />
+ &lt;figcaption class="imageCaption">Hugo 主题 Hera&lt;/figcaption>
 &lt;/figure>
 &lt;/p>
 &lt;blockquote>
@@ -556,7 +556,6 @@ database_id = &amp;#34;81e23e8a-3b26-4025-acf8-1123bfd5af74&amp;#34;
  
 &lt;/div>
 
-&lt;h2 id="国内用户特别设置">国内用户特别设置&lt;/h2>
 &lt;h3 id="物品列表使用方法">物品列表使用方法&lt;/h3>
 &lt;p>在&lt;code>content&lt;/code>目录下新建&lt;code>gears/_index.md&lt;/code>，按照下面的格式设置&lt;code>faves&lt;/code>字段即可&lt;/p>
 &lt;pre tabindex="0">&lt;code>---

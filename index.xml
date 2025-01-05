@@ -56,10 +56,10 @@ layout: travel
  authorAvatar = &amp;#39;https://secure.gravatar.com/avatar/2fd7e2e17a671f8e3fade0706e0a667e?s=128&amp;amp;d=mm&amp;amp;r=g&amp;#39;
 &lt;/code>&lt;/pre>&lt;h3 id="搜索">搜索&lt;/h3>
 &lt;p>推荐使用&lt;code>algolia&lt;/code>，个人小站免费额度够用了。&lt;/p>
-&lt;p>站点配置参数，设置成你自己的，主要不要暴露&lt;code>adminKey&lt;/code>&lt;/p></description></item><item><title>221g</title><link>https://bigfa.github.io/hugo-theme-notability/memo/2/</link><pubDate>Fri, 03 Jan 2025 17:13:25 +0800</pubDate><guid>https://bigfa.github.io/hugo-theme-notability/memo/2/</guid><description>&lt;p>对于 STEM 学生，Mantis SAO 是几乎很难避免的，因为判断 dual-use technology 是依靠 Technology Alert List 里面列出可能存在敏感或是军民两用技术。虽然是 2002 年的文件，但里面基本上扫射了所有 STEM 专业，再加上最近紧张的政治局势，还有签证官基本上不具备 STEM 背景知识，导致大部分签证官在看到申请人专业时抱着「宁可错杀三千也不放过一个」心态直接给个 check 结果。Mantis SAO 的标准工作时长是 15 个工作日，但也可以无限长（极端个例会在下文提及）。大家常说敏感专业啥的被 check，本质是基于 Mantis SAO。&lt;/p></description></item><item><title>Hugo 主题 Hero</title><link>https://bigfa.github.io/hugo-theme-notability/story/hugo-theme-hera/</link><pubDate>Fri, 03 Jan 2025 13:36:45 +0800</pubDate><guid>https://bigfa.github.io/hugo-theme-notability/story/hugo-theme-hera/</guid><description>&lt;p>
+&lt;p>站点配置参数，设置成你自己的，主要不要暴露&lt;code>adminKey&lt;/code>&lt;/p></description></item><item><title>221g</title><link>https://bigfa.github.io/hugo-theme-notability/memo/2/</link><pubDate>Fri, 03 Jan 2025 17:13:25 +0800</pubDate><guid>https://bigfa.github.io/hugo-theme-notability/memo/2/</guid><description>&lt;p>对于 STEM 学生，Mantis SAO 是几乎很难避免的，因为判断 dual-use technology 是依靠 Technology Alert List 里面列出可能存在敏感或是军民两用技术。虽然是 2002 年的文件，但里面基本上扫射了所有 STEM 专业，再加上最近紧张的政治局势，还有签证官基本上不具备 STEM 背景知识，导致大部分签证官在看到申请人专业时抱着「宁可错杀三千也不放过一个」心态直接给个 check 结果。Mantis SAO 的标准工作时长是 15 个工作日，但也可以无限长（极端个例会在下文提及）。大家常说敏感专业啥的被 check，本质是基于 Mantis SAO。&lt;/p></description></item><item><title>Hugo 主题 Hera</title><link>https://bigfa.github.io/hugo-theme-notability/story/hugo-theme-hera/</link><pubDate>Fri, 03 Jan 2025 13:36:45 +0800</pubDate><guid>https://bigfa.github.io/hugo-theme-notability/story/hugo-theme-hera/</guid><description>&lt;p>
 &lt;figure class="grap--figure">
- &lt;img src="https://static.fatesinger.com/2024/12/2u80bhyxkmru4o9j.png" alt="Hugo 主题 Hero" />
- &lt;figcaption class="imageCaption">Hugo 主题 Hero&lt;/figcaption>
+ &lt;img src="https://static.fatesinger.com/2024/12/2u80bhyxkmru4o9j.png" alt="Hugo 主题 Hera" />
+ &lt;figcaption class="imageCaption">Hugo 主题 Hera&lt;/figcaption>
 &lt;/figure>
 &lt;/p>
 &lt;blockquote>
@@ -1440,7 +1440,6 @@ database_id = &amp;#34;81e23e8a-3b26-4025-acf8-1123bfd5af74&amp;#34;
  
 &lt;/div>
 
-&lt;h2 id="国内用户特别设置">国内用户特别设置&lt;/h2>
 &lt;h3 id="物品列表使用方法">物品列表使用方法&lt;/h3>
 &lt;p>在&lt;code>content&lt;/code>目录下新建&lt;code>gears/_index.md&lt;/code>，按照下面的格式设置&lt;code>faves&lt;/code>字段即可&lt;/p>
 &lt;pre tabindex="0">&lt;code>---
