@@ -171,7 +171,7 @@ export class farallonComment extends farallonHelper {
                     );
                     formDataObj["post_id"] = this.post_id;
                     this.loading = true;
-                    fetch(this.actionDomain + "comment", {
+                    fetch(this.actionDomain + "comment/insert", {
                         method: "POST",
                         body: JSON.stringify(formDataObj),
                         headers: {
